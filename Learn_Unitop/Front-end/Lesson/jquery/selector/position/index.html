@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11: Nhóm selector định vị</title>
+    <script src="js/jquery-3.5.1.min.js">   </script>
+</head>
+
+<body>
+    <!-- Note:
+        1. $(':eq()index') -> Chọn phần tử tại vị trí có chỉ số index trong tập hợp các phần tử của bộ chọn
+        2. $(':first') -> Chọn phần tử tại vị trí đàu tiên trong tập hợp các phần tử của bộ chọn
+        3. $(':last') -> Chọn phần tử tại vị trí cuối cùng trong tập hợp các phần tử của bộ chọn
+        4. $(':gt(index') -> Chọn tất cả các phàn tử trong bộ chọn có chỉ lớn hơn index
+        5. $(':lt(index)') -> Chọn tất cả các phần tử trong bộ chọn có chỉ số nhỏ hơn index
+        6. $(':odd') -> Chọn tất cả các phần tử trong bộ chọn nằm ở vị trí có chỉ lẻ
+        7. $(':even') -> Chọn tất cả các phần tử trong bộ nằm ở vị trí chỉ số chẵn
+        8. $(':not(selector)') -> Chọn phần tử trong bộ chọn không phụ thuộc vào selector được chỉ định
+     -->
+
+    <script>
+        $(document).ready(function () {
+            //1. Chọn phần tử  p có chỉ số 1 => màu đỏ
+            // $('p:eq(1)').css('color', 'red');
+            //2. Chọn phần tử p đầu tiên => màu đỏ
+            // $('p:first').css('color', 'red');
+            //3. Chọn phần tử p cuối cùng => màu đỏ
+            // $('p:last').css('color', 'red');
+            //4. Chọn phần tử p có chỉ số lơn hơn 1 => màu đỏ
+            // $('p:gt(1)').css('color', 'red');
+            //5. Chọn phần tử p có chỉ số nhỏ hơn 3 => màu đỏ
+            // $('p:lt(3)').css('color', 'red');
+            //6. Chọn phần tử p có chỉ số lẻ=> màu đỏ
+            // $('p:odd').css('color', 'red');
+            //7. Chọn phần tủ p có chỉ số chẵn => màu đỏ
+            // $('p:even').css('color', 'red');
+            //8. Chọn tất cả phần tử p ngoại trừ chỉ số 2 => màu đỏ
+            // $('p:not(p:eq(2))').css('color', 'red');
+            // $('p:not(p.p8)').css('color', 'red');
+        });
+    </script>
+
+    <p>Nội dung 1</p>
+    <p>Nội dung 2</p>
+    <p>Nội dung 3</p>
+    <p>Nội dung 4</p>
+    <p>Nội dung 5</p>
+    <p>Nội dung 6</p>
+    <div class="box">
+        <p>Nội dung 7</p>
+        <p class="p8">Nội dung 8</p>
+        <p>Nội dung 9</p>
+    </div>
+    <a href="">Link 1</a>
+    <a href="">Link 2</a>
+</body>
+</html>

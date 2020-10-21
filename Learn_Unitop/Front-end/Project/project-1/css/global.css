@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul li{
+	list-style: none;
+}
+a , a:hover{
+	text-decoration:none;
+}
+input , button{
+	outline: none;
+}
+.col-1{
+	width: 6.333333333%;
+	margin: 0 1%;
+	float: left;
+}
+.col-2{
+	width: 14.66666667%;
+	margin: 0 1%;
+	float: left;
+}
+.col-3{
+	width: 23%;
+	margin: 0 1%;
+	float: left;
+}
+.col-4{
+	width: 31.33333333%;
+	margin: 0 1%;
+	float: left;
+}
+.col-5{
+	width: 39.66666667%;
+	margin: 0 1%;
+	float: left;
+}
+.col-6{
+	width: 48%;
+	margin: 0 1%;
+	float: left;
+}
+.col-7{
+	width: 56.33333333%;
+	margin: 0 1%;
+	float: left;
+}
+
+.col-8{
+	width: 64.66666667%;
+	margin: 0 1%;
+	float: left;
+}
+.col-9{
+	width: 73%;
+	margin: 0 1%;
+	float: left;
+}
+.col-10{
+	width: 81.33333333%;
+	margin: 0 1%;
+	float: left;
+}
+.col-11{
+	width: 89.66666667%;
+	margin: 0 1%;
+	float: left;
+}
+.col-12{
+	width: 98%;
+	margin: 0 1%;
+	float: left;
+}
+
+
+.text-upercase{
+	text-transform: uppercase;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}

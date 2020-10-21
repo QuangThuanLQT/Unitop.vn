@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính thay đổi vị trí hiển thị order</title>
+</head>
+
+<body>
+    <style>
+        /* order --> thay đổi vị trí hiển thị của các item 
+            phía trong phần tử display flex mà ko cần tác động đến cấu trúc html*/
+        .container {
+            background: coral;
+            display: flex;
+        }
+
+        .flex-item {
+            text-align: center;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            background: cornflowerblue;
+            color: cornsilk;
+            font-size: 20px;
+        }
+        .item-1{
+            order: 4;
+        }
+        
+        .item-2{
+            order: 2;
+        }
+        .item-3{
+            order: 1;
+        }
+        .item-4{
+            order: 3;
+        }
+    </style>
+    <h1>Thuộc tính thay đổi vị trí hiển thị order</h1>
+    <!-- .container>.list-item>.item${$}*4 -->
+    <div class="container">
+        <div class="flex-item item-1">1</div>
+        <div class="flex-item item-2">2</div>
+        <div class="flex-item item-3">3</div>
+        <div class="flex-item item-4">4</div>
+    </div>
+</body>
+
+</html>

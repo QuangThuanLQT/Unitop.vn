@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6: Cú pháp viết code jquery</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Cú pháp: $(selector).action(); -->
+    <!-- $ là phần viết tẳt của jquery (chữ ký)
+    selector (bộ chọn) là tập hợp các phần tử html cần xử lý
+    action là hành động xử lý lên các đối tượng liệt kê ở selector vd: sự kiện, hiệu ứng
+    kết thúc dấu ; -->
+
+
+    <script>
+        $(document).ready(function () {
+            $('p .first-name').text('Phan Văn');
+            $('p .last-name').text('Cương');
+        })
+    </script>
+    <p>Dữ liệu ban đầu</p>
+    <p>Họ: <span class="first-name"></span></p>
+    <p>Tên: <span class="last-name"></span></p>
+</body>
+
+</html>

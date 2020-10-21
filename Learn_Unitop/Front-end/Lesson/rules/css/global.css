@@ -1,0 +1,21 @@
+.text-left{
+    text-align: left;
+}
+.text-rigth{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-justify{
+    text-align: justify;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+
+/* .... */

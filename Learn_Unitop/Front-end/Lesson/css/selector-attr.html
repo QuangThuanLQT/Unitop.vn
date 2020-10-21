@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector theo thuộc tính</title>
+</head>
+
+<body>
+    <style>
+        a[href] {
+            color: teal;
+        }
+
+        /* a[href="http://unitop.vn"] {
+            color: tomato;
+        } */
+
+        /* dấu * chưa thuộc tính */
+        /* a[href*="unitop"] {
+            color: tomato;
+        } */
+
+        /* dấu ^ đầu thuộc tính */
+        /* a[href^="http"] {
+            color: tomato;
+        } */
+
+        /* dấu $ cuối thuộc tính */
+        a[href$="vn"] {
+            color: tomato;
+        }
+    </style>
+    <h1>Selector theo thuộc tính</h1>
+    <a href="http://unitop.vn">PHP Mater</a> <br>
+    <a href="http://google.com">Bootstrap AZ</a>
+
+</body>
+
+</html>

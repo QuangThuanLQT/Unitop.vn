@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng làm mềm quá trình thay đổi css - transition</title>
+</head>
+
+<body>
+    <style>
+        /* 
+        cú pháp: 
+            transition: property time
+        properrty: width, background, heightf, color, ...
+        time: 0.5s , 1s
+        ==> Giúp làm chậm quá trình thay đổi  giá trị thuộc tính của một đối tượng html */
+        .box{
+            background-color: lightcoral;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 50px;
+            width: 200px;
+        }
+        .box:hover{
+            width: 400px;
+            background-color: green;
+            /* transition: width 0.5s, background-color 0.5s; */
+            transition: all 0.5s;
+        }
+    </style>
+    <h1>Hiệu ứng làm mềm quá trình thay đổi css - transition</h1>
+    <div class="box">
+        Box
+    </div>
+</body>
+
+</html>

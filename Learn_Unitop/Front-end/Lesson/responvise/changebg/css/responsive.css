@@ -1,0 +1,70 @@
+
+/*===========Yêu cầu=============*/
+/*Iphone (320 x 480)*/
+/*background-color: gold (320px - 480px)*/
+
+/*Table nhỏ (480 x 768)*/
+/*background-color: blue (480px - 768px)*/
+
+/*Ipad dọc (768 x 1024)*/
+/*background-color: black (768px - 1024px)*/
+
+/*Ipad ngang (1024 x 768)*/
+/*background-color: yellow (1024px - 768px)*/
+
+
+/*===========Mobile_first=============*/
+/* IPhone (480 x 640)*/
+/*@media screen and (min-width: 320px){	
+	body {
+		background: gold;
+	}
+}
+*/
+/*Tablet nhỏ (480 x 640)*/
+/*@media screen and (min-width: 480px){
+body {
+		background: blue;
+	}	
+}
+*/
+/*Ipad dọc (768 x 1024)*/
+/*@media screen and (min-width: 768px){	
+	body {
+		background: black;
+	}
+}*/
+
+/*Ipad ngang (1024 x 768)*/
+/*@media screen and (min-width: 1024px){	
+	body {
+		background: yellow;
+	}
+}
+*/
+
+/*===========Pc_first=============*/
+/*Ipad ngang (1024 x 768)*/
+body{
+	background: yellow;
+}
+
+@media screen and (max-width: 1024px){	
+	body{
+		background: black;
+	}
+}
+
+/*Ipad dọc (768 x 1024)*/
+@media screen and (max-width: 768px){	
+	body{
+		background: blue;
+	}
+}
+
+/*Tablet nhỏ (480 x 640)*/
+@media screen and (max-width: 480px){	
+	body{
+		background: gold;
+	}
+}

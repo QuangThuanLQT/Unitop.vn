@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính căn chỉnh item theo chiều ngang justify content</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            /* flexbox chỉ nên được dùng khi bạn xử lí với layout chỉ có một chiều (hoặc là hàng hoặc là cột) */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* justify-content: center; --> giá trị này sẽ căn giữa các thành phần trong flexbox*/
+            /* justify-content: flex-start; --> luôn là giá trị mặc định, kể cả khi bạn không khai báo thuộc tính này,
+                                             nó sẽ luôn căn phần tử về phía trái, khá giống với float: left */
+            /* justify-content: flex-end; --> thì giống với float-right, nó căn các phần tử về phía bên phải */
+            /* justify-content: space-around; --> Giá trị này cũng làm cho các khoảng cách giữa các phần tử bằng nhau,
+                                             tuy nhiên nó cũng thay đổi cả vị trí của hai phần tử đầu cuối*/
+            /* justify-content: space-evenly --> nó làm cho các khoảng cách ở giữa hai vùng kề cận nhau luôn như nhau; */
+            /* justify-content: space-between; --> Gía trị này giúp cho các khoảng cách giữa các thành phần luôn bằng nhau, 
+                                            tuy nhiên phần tử đầu luôn nằm sát trái, phần tử cuối luôn nằm sát phải */
+            background: gray;
+            width: 1170px;
+            margin: 0 auto;
+
+        }
+
+        .box {
+            width: 100px;
+            background-color: cadetblue;
+            padding: 40px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+    <h1>Thuộc tính căn chỉnh item theo chiều ngang justify content</h1>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thứ tự ưu tiên và cách thăng hạng style css</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Thứ tự ưu tiên:
+    1. css inline > css internal > css external
+    2. id ưu tiên hơn class
+    3. selector chi tiết ưu tiên hơn selector chung chung
+    4. cùng selector vị trí dưới đè selector vị trí trên 
+    
+    để thăng hạng css sử dụng hậu tố !important
+-->
+    <style>
+        h1{
+            color: red!important;
+        }
+    </style>
+    <h1 style="color: blue;">Thứ tự ưu tiên và cách thăng hạng style css</h1>
+    <h1 class="post-title" id="home-title">Thứ tự ưu tiên và cách thăng hạng style css</h1>
+</body>
+</html>

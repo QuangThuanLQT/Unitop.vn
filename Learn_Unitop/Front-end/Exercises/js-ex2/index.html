@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bai tap Function</title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		// 1. Viết hàm kiểm tra tính chia hết cho k của n (Trả về Boolean)
+		document.write("<b>Bài 1.</b> Viết hàm kiểm tra tính chia hết cho k của n (Trả về Boolean). </br>");
+		function check_divisble(n, k) {
+			document.write(n + " có chia hết cho " + k + " không?</br>");
+			if (n % k == 0) {
+				return true;
+			} return false;
+		}
+		document.write(check_divisble(12, 3));
+		document.write("</br>============================</br>")
+
+		// 2. Viết hàm tính tích các số nguyên chia hết cho k trong đoạn từ 1 -n 
+		document.write("<b>Bài 2.</b> Viết hàm tính tích các số nguyên chia hết cho k trong đoạn từ 1 -n. </br>");
+		function total_mul(n, k) {
+			document.write(`Danh sách các số từ 1 - ${n} chia hết cho ${k} </br>`);
+			var total = 1;
+			for (var i = 1; i <= n; i++) {
+				if (i % k == 0) {
+					document.write(i + "</br>");
+					total *= i;
+				}
+			}
+			return total;
+		}
+		var total = total_mul(10, 3);
+		document.write("--------------------------- </br>")
+		document.write(`Tổng: ${total}`);
+		document.write("</br>============================</br>")
+
+		// 3. Viết kiểm tra số nguyên tố
+		document.write("<b>Bài 3.</b> Viết hàm kiểm tra số nguyên tố.</br>");
+		function check_prime(n) {
+			for (i = 2; i <= Math.sqrt(n); i++) {
+				if (n % i == 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+		n = 35;
+		if (check_prime(n)) {
+			document.write(n + " là số nguyên tố");
+		}
+		else {
+			document.write(n + " không phải là số nguyên tố");
+		}
+		document.write("</br>============================</br>")
+		// 4. Viết hàm tính tổng các số nguyên tố từ 2 đến n
+		document.write("<b>Bài 4.</b> Viết hàm tính tổng các số nguyên tố từ 2 đến n. </br>");
+		function totalPrime(n) {
+			for (i = 2; i <= Math.sqrt(n); i++) {
+				if (n % i == 0){
+					return false;
+				}	
+			}
+			return true;
+		}
+
+		function show_prime(n) {
+			var total_prime = 0;
+			for (var i = 2; i <= n; i++) {
+				if (totalPrime(i)) {
+					total_prime += i;
+					document.write(i + "\&nbsp")
+					
+				}
+			} return total_prime;
+
+		}
+		document.write("</br>--------------------------- </br>" + "Tổng các số nguyên tố từ 2 đến 100 là: " + show_prime(100));
+	</script>
+</body>
+
+</html>

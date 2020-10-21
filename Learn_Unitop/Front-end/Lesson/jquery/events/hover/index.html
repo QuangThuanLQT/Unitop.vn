@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 32: Sự kiện hover</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    
+    <!-- Note:
+    
+    Sự kiện giúp thực hện một hoặchai xử lý khi chúng ta ghé thăm 
+    hoặc rời khỏi một phần tử html được xác định
+    
+    -->
+
+    <style>
+        #target{
+            display: inline-block;
+            background-color: darkcyan;
+            padding: 10px;
+            margin: 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            // $('#target').hover( //có 2 tham sô In / Out
+            //     //Hover in
+            //     function(){
+            //         console.log('Hover in');
+            //     },
+            //     //Hover out
+            //     function(){
+            //         console.log('Hover out');
+            //     }
+            // );
+
+
+            $('#target').hover( //1 tham số InOut
+                function(){
+                    console.log('Hover In Out');
+                }
+            );
+        });
+    </script>
+
+
+    <h1>Bài 32: Sự kiện hover</h1>
+    <a href="#" id="target">#target</a>
+</body>
+</html>

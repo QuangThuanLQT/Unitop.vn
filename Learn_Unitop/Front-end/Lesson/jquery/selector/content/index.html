@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuBài 13: Nhóm selector lọc theo nội dungment</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!--Note:
+    
+        1. $(":contains(text)") -> Chọn phần tử có chứa nội dung text xác định
+        2. $(":empty") -> Chọn tất cả phần tử có nội dung rỗng bao gồm không có text hoặn các thẻ như input, <img>, <br>, <hr>
+        3. $(":parent") -> Chọn những phần tử có ít nhất một phần tử con có thể text hoặc phần tử html
+        4. $(":has(selector)") -> Chọn tất cả các phần tử có ít nhất một phần tử con có selector xác định
+     -->
+
+
+    <script>
+        $(document).ready(function () {
+            //1. Tìm phần tử  không có nội dung -> border: 1px solid #3333
+            // $("ul li:empty").css('border', '1px solid #333');
+            // $("ul li:empty").text('Không có nội dung').css('color', 'red');
+            //2. Tìm phần tử có chứa nội dung 'phần' -> màu đỏ
+            // $("ul li:contains('Phần')").css('color', 'red');
+            //3. Tìm tất cả  các phần tử có  phần tử con, hoặc có nội dung -> màu đỏ
+            // $("ul li:parent").css('color', 'red'); //--> Ngược lại empty
+            //4. Tìm phần tử có ít nhất phần tử con là selector cho trước
+            // $("ul.sub:has('.color_red')").css('border', '1px solid #333');
+        });
+
+    </script>
+
+
+    <ul>
+        <li>Phần tử 1</li>
+        <li>Phần tử 2</li>
+        <li>
+            <ul class="sub">
+                <li class="color_red">Phần tử 3.1</li>
+                <li>Phần tử 3.2</li>
+            </ul>
+        </li>
+        <li></li>
+        <li>Phần tử 4</li>
+    </ul>
+</body>
+
+</html>

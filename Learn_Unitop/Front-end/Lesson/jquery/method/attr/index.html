@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17: Nhóm phương thức về thuộc tính</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>  
+    <!--Note:
+        
+        1. .attr(attributeName) -> Lấy giá trị thuộc tính attributeName của phẩn tử đầu tiên trong bộ chọn
+        2. .attr(attributeName, value) -> Thiết lập giá trị value cho thuộc tính attributeName của phần tử đầu tiên trong bộ chọn
+        3. .removeAttr(attributeName) -> Xoá bỏ thuộc tính attributeName trong mỗi phần trong bộ chọn
+
+     -->
+
+    <script>
+        $(document).ready(function(){
+            //1. Click vào a hiển thị lên link của hình ảnh thông qua alert()
+            $('a.get_link_image').click(function(){
+                // alert("OK");
+                var link_image = $('img').attr('src');
+                // var link_image = $('img').attr('title', 'Camera hành trình');
+                var data_href = $('img').attr('data-href');
+            
+                alert (link_image);
+                return false; //bỏ đi giá trị mặc định của thẻ a ỏ vd bỏ đi dấu #
+            })
+            //2. 
+            $('a.removeAttr').click(function(){
+                var removeAttr = $('img').removeAttr('src');
+                return false;
+            })
+        });
+
+    </script>
+
+
+
+    <img data-href="abc.html" src="images/camera_hanh_trinh.jpg" alt="" title="" >
+    <a class="get_link_image" href="#">Link thông tin</a>
+    <a href="" class="removeAttr">Huỷ giá trị thuộc tính</a>
+
+</body>
+</html>

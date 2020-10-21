@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Bài 19: Nhóm phương thức giá trị</title>
+    <script src='js/jquery-3.5.1.min.js'></script>
+</head>
+
+<body>
+
+    <!--Note:
+        
+        1. .val() -> Lấy giá trị hiện tại của phần tử đầu tiên trong bộ chọn(áp dụng cho form: input, select, checkbok, ...)
+        2. .val(value) -> Thiết lập gái trị cho phần tử đầu tiên trong bộ chọn
+        3. text() -> Lấy và kết hợp tất cả các text của các phần tử trong bộ chọn
+        4. text(value) -> Thiết lập cho mỗi phần tử trong bộ chọn có nội dung là value
+        5. html() -> Lấy nội dung thẻ html của phần tử đầu tiên trong bộ chọn
+        6. html(stringHtml) -> Thiết lập nội dung html(stirngHtml) cho tất cả các phàn tử trong bộ chọn
+
+     -->
+
+    <style>
+        input {
+            display: block;
+            margin: 5px 0px 10px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            //1. val(value)
+            // $('#username').val('Admin');
+            //2. val
+            // $('#form_login').submit(function () {
+            //     var username = $('#username').val();
+            //     var password = $('#password').val();
+            //     alert(username + '-' + password)
+
+            //     return false; //Huỷ reload submit, link của thẻ a
+            // });
+            //3. text()  + (value)
+            // $('#form_login').submit(function () {
+            //     var username = $('#username').val();
+            //     var password = $('#password').val();
+
+            //     $('#val_username').text(username);
+            //     $('#val_password').text(password);
+
+            //     // alert($('#val_username').text());
+
+            //     return false; 
+            // });
+
+            //4. html
+            $('#form_login').submit(function () {
+                var str_result;
+                
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                $('#val_username').text(username);
+                $('#val_password').text(password);
+
+                str_result = "<p>Username: <strong id='val_username'>"+username+"</strong></p><p>Password: <strong id='val_password'>"+password+"</strong></p>";
+                // alert(str_result);
+
+                $('#result').html(str_result);
+
+                alert($('#result').html());
+
+
+                return false;
+            });
+
+        });
+    </script>
+
+    <h1>Form đăng nhập</h1>
+    <form action='#' id='form_login'>
+        <label for='username'>Usename</label>
+        <input type='text' name='username' value='' id='username'>
+        <label for='password'>Password</label>
+        <input type='password' name='password' value='' id='password'>
+        <input type='submit' name='sm_login' value='Đăng nhập'>
+        <!-- <p>Username: <strong id='val_username'></strong></p>
+        <p>Password: <strong id='val_password'></strong></p> -->
+        <div id="result"></div>
+    </form>
+
+</body>
+
+</html>

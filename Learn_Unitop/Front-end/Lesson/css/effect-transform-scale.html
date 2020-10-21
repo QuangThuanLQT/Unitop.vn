@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tăng giảm kích thước đối tượng theo tỉ lệ - scale</title>
+</head>
+<body>
+    <style>
+        /* 
+        cú pháp
+            transform: scale(value);
+                value: (1, 1) (1.2, 1.2)
+        ==> Thay đổi kích thước phần tử theo tỉ lệ cho trước
+         */
+        .box{
+            width: 200px;
+            height: 100px;
+            background: green;
+            padding: 10px;
+            transition: all 0.5s;
+            margin-left: 400px;
+            margin-top: 200px;
+        }
+        .box:hover{
+            transform: rotate(50deg) scale(1.5, 1.5);
+        }
+    </style>
+    <h1>Tăng giảm kích thước đối tượng theo tỉ lệ - scale</h1>
+    <div class="box">Box</div>
+</body>
+</html>

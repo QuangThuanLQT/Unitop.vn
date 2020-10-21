@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính căn chỉnh flex item theo phương thẳng đứng</title>
+</head>
+
+<body>
+    <style>
+    /* 
+    - stretch: Giá trị mặc định. Các dòng kéo dài để chiếm không gian còn lại
+    - center:  Các đường trung tâm được đóng gói về phía trung tâm của thùng linh hoạt
+    - flex-start: Các dòng được đóng gói về phía đầu của hộp flex
+    - flex-end: Các dòng được đóng gói về phía cuối của hộp flex
+    - space-between: các dòng được phân bố đều trong vùng chứa linh hoạt
+    - space-around: Các dòng được phân bố đồng đều trong vùng chứa linh hoạt, với khoảng cách nửa kích thước ở hai đầu */
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background: gray;
+            width: 1170px;
+            height: 600px;
+            margin: 0 auto;
+            align-content: center;
+            justify-content: space-between;
+            align-content: space-between;
+
+        }
+
+        .box {
+            width: 100px;
+            background-color: cadetblue;
+            padding: 40px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+    <h1>Thuộc tính căn chỉnh flex item theo phương thẳng đứng</h1>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+</body>
+
+</html>

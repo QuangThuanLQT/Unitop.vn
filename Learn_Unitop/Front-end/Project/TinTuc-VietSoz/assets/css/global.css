@@ -1,0 +1,29 @@
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.d-flex {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.text-right {
+    text-align: right;
+}

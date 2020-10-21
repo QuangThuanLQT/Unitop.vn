@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 21: Nhóm phương thức tìm kiếm, lọc(phần 1)</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!--Note:
+        
+        1. .eq(index) -> Định vị phần tử tập bộ chọn với chỉ số xác định
+        2. not(selector) -> Loại bỏ tập hợp các phần tử được định nghĩa bởi selector trong tập hợp các phàn tử trong bộ chọn
+        3. .filter(selector) -> Giới hạn tập phần tử trong bộ chọn bởi bộ lọc các phần tử trong selector
+        4. next(selector) -> Định vị đến phần tử theo sau cùng cấp của mối phần tử trong bộ chọn hoặc được xác định bởi selector
+        5. nextAll(selector) -> Định vị đến tất cả các phần tử trong cùng cấp của các phần tử trong bộ chọncon hoặc được xác định bởi selector
+        6. .prev(selector) -> Định vị đến phần tử phía trước cùng cấp của mỗi phàn tử trong bộ chọn hoặc được xác định bởi selector
+        7. .prevAll(selector) -> Định vị đến tất cả các phần tử phía trước trong cùng cấp của các phần tử trong bộ chọn hoặc được xác định bởi selector
+        8. is(selector) -> Kiểm tra số lượng phần tử được lọc bởi selector trong tập hợp các phần tử trong bộ chọn.  Phương thức trả về true nêys ít nhất một phần tử phù hợp ngược lại trả vè false
+        9. .find(selector) -> Tìm tất cả các phần tử là "con cháu" của các phần tử trong bộ chọn được xác định bởi selector
+        10. .children(selector) -> TÌm tất cả các "phần tử con "của bộ chọn trong HTML, có thể được lọc bởi selector
+        11. .parent(selector) -> Tìm đến tất cả các "phần tử là cha" của các phần tử trong bộ chọn có thể lọc thông qua selector
+        12. .parents(selector) -> Tìm đến tất cả các "phần tử là tổ tiên" của các phàn tử trong bộ chọn, có thể lọc thông qua selector
+
+
+     -->
+
+
+
+    <style>
+        /* .sub-menu{
+            display: none;
+        } */
+    </style>
+
+
+    <script>
+        $(document).ready(function () {
+            //1. eq
+            // $('p').eq(2).css('color', 'red');
+            //2. not (những thẻ p không có highlight)
+            // $('p').not('.highlight').css('color', 'green')
+            //3. filter (những thẻ p có highlight)
+            // $('p').filter('.highlight').css('color', 'red')
+            //4. next
+            // $('p').filter('.highlight').next().css('color', 'gold') //sau highlight 1 cấp
+            //5. nextAll
+            // $('p').filter('.highlight').nextAll().css('color', 'gold')  // tất cả sau highlight
+            // $('p').eq(2).nextAll('.highlight').css('color', 'gold') 
+            //6. prev
+            //  $('p').filter('.highlight').prev().css('color', 'gold')
+            //7. prevAll
+            // $('p').filter('.highlight').prevAll().css('color', 'gold')
+            //8. is
+            // $('p').click(function(){
+            //     if($(this).is('.highlight')){ 
+            //         //this là phần tử đang làm việc
+            //         //Nếu nó là highlight
+            //         alert('Đây là highlight')
+            //     }
+            // });
+
+            // //9. Children, find
+            // $('#main-menu li').click(function(){
+            //     $(this).children('.sub-menu').show();
+            //     $(this).children('.sub-menu').find('a').css('color', 'red');
+            // });
+            //10. parent, parents
+            // $('#main-menu a').click(function(){
+            //     // alert('Ok');
+            //     // $(this).parent('li').parent('ul').css('background', 'gray') //parent ra một cấp về thằng cha
+            //     $(this).parents('ul').css('border', '1px solid red')
+
+            //     return false;
+            // })
+
+        });
+
+
+    </script>
+
+
+    <!-- <p>Đoạn văn bản 1</p>
+    <p class="highlight">Đoạn văn bản 2</p>
+    <p>Đoạn văn bản 3</p>
+    <p>Đoạn văn bản 4</p>
+    <p class="highlight">Đoạn văn bản 5</p>
+    <p>Đoạn văn bản 6</p> -->
+
+
+    <ul id="main-menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a>
+            <ul class="sub-menu">
+                <li><a href="">Menu 2.1</a></li>
+                <li><a href="">Menu 2.2</a></li>
+                <li><a href="">Menu 2.3</a></li>
+                <li><a href="">Menu 2.4</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a>
+            <ul class="sub-menu">
+                <li><a href="">Menu 4.1</a></li>
+                <li><a href="">Menu 4.2</a></li>
+                <li><a href="">Menu 4.3</a></li>
+                <li><a href="">Menu 4.4</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 5</a></li>
+        <li><a href="">Menu 6</a></li>
+        <li><a href="">Menu 7</a></li>
+    </ul>
+
+</body>
+
+</html>

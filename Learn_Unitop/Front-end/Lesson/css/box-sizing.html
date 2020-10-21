@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 cách xác định kích thước khối</title>
+</head>
+
+<body>
+    <style>
+        /* 
+        - box-sizing: content-box;
+            Kích thước nở ra khi sử dụng padding-border
+        - box-sizing: border-box;
+            Kích thước không thay đổi khi sử dụng padding-border */
+        .box1{
+            width: 400px;
+            height: 200px;
+            padding: 15px;
+            border: 2px solid red;
+            box-sizing: content-box;
+            margin-bottom: 20px;
+            /* content-box : mặc định 
+            with box: 400px + 15px*2 + 2px*2 = 434px
+            height box: 200px + 15px*2 + 2px*2 = 234px
+            */
+        }
+        .box2{
+            width: 400px;
+            height: 200px;
+            padding: 15px;
+            border: 2px solid red;
+            box-sizing: border-box;
+        }
+    </style>
+    <h1>2 cách xác định kích thước khối</h1>
+    <div class="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente et fuga voluptatum perspiciatis nemo
+            esse, corporis laborum consequuntur suscipit aliquam, praesentium blanditiis nisi veritatis odit molestias!
+            Reprehenderit, molestiae ipsam?
+        </p> 
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sapiente et fuga voluptatum perspiciatis nemo
+            esse, corporis laborum consequuntur suscipit aliquam, praesentium blanditiis nisi veritatis odit molestias!
+            Reprehenderit, molestiae ipsam?
+        </p> 
+    </div>
+</body>
+
+</html>

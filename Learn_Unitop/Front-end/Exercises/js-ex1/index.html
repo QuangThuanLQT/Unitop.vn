@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bai tap vong lap For</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 1. Tinh tong  cac so le  tu 1 - 1500
+		
+		document.write("<b>Bài 1.</b> Tinh tong cac so le  tu 1 - 1500 </br>")
+		var total = 0;
+		document.write("Danh sach cac so le: </br>");
+
+		for (var i = 1; i <= 1500; i++) {
+			if (i % 2 != 0) {
+				total += i;
+				document.write(i + "&nbsp;");
+			}
+		}	
+		document.write("------------------- </br>");
+		document.write("Tong cac so le la : " + total);
+		document.write("</br> ================================= </br>");
+		/*2. Tinh tong chuoi T1:
+			T1 = 1 + 1/2 + 1/3 + ... + 1/n
+			(n la so nguyen duong)*/
+			document.write("<b>Bài 2.</b> Tinh tong chuoi T1: </br> T1 = 1 + 1/2 + 1/3 + ... + 1/n </br> (n la so nguyen duong)");
+			var total_1 = 0;
+			var n = 5;
+			document.write("</br>Danh sach cac so chuoi T1: </br>");
+
+			if (n >= 0) {
+				for (var i = 1; i <= n; i++) {
+					total_1 += 1/i ;
+					document.write(1/i + "</br>");
+				}
+			}else{
+				document.write("So nhap khong hop le!!! Vui long kiem tra lai!");
+			}
+
+			document.write("------------------- </br>");
+			document.write("Tong chuoi T1 la: " + total_1.toFixed(2));
+			document.write("</br> ================================= </br>");
+		/*3. Tinh tong chuoi T2:
+			T2 = 1/2 + 2/3 + 3/4 + ... + n-1/n
+			(n la so nguyen duong)*/
+			document.write("<b>Bài 3.</b> Tinh tong chuoi T2: </br> T2 = 1/2 + 2/3 + 3/4 + ... + n-1/n </br> (n la so nguyen duong)");
+			var total_2 = 0;
+			var n = 5;
+			document.write("</br>Danh sach cac so chuoi T2: </br>");
+			
+			if (n >= 0) {
+				for (var i = 1; i <= n; i++) {
+					total_2 += i / (i + 1) ;
+					document.write(i / (i + 1) + "</br>");
+				}
+			}else{
+				alert("So nhap khong hop le!!! Vui long kiem tra lai!");
+			}
+
+			document.write("------------------- </br>");
+			document.write("Tong chuoi T2 la: " + total_2.toFixed(2));
+		</script>
+	</body>
+	</html>

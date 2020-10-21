@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9: Nhóm selector cơ bản</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Note:
+        1. $(element) -> chọn tag html
+        2. $('.className') -> chọn tất cả các clasName
+        3. $('#idName') -> Chon phần tử có idName
+        4. $('*') -> Chọn tất cả các phần tử html
+        5. $(F, G, H) -> Hợp kết quả các bộ chọn thành phần H, G ,H
+     -->
+
+
+    <div id="box1" class="box">
+        <p>Nội dung box 1</p>
+    </div>
+    <div id="box2" class="box">
+        <p>Nội dung box 2</p>
+    </div>
+    <div id="box3" class="box">
+        <p>Nội dung box 3</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            //1. Thiết lập text màu đỏ
+            $('p').css('color', 'red');
+            //2. Thiết lập các box có css sau 
+            $('.box').css({ 'text-align': 'center', 'width': '200px', 'height': '100px', 'margin': '20px', 'border': '1px solid #333' });
+           //3. Thiết lập box1 có backgorund: black
+            $('#box1').css('background', 'gray');
+            //4. Thiết lập box2, box3 có background: gold
+            $('#box2, #box3').css('background', 'gold');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 31: Sự kiện submit form</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <!-- Note:
+    
+        1. Đây là sự kiện giúp chúng ta thực thi các chức năng khi submit form 
+            hoặc kích hoạt submit trên một form được chỉ định
+    
+    -->
+    
+    <style>
+        input{
+            display: block;
+            margin: 10px 0px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('form#target').submit(function(){
+                var username, password;
+                username = $('#username').val();
+                password = $('#password').val();
+                alert(username+"--"+password);
+                return false;
+            });
+
+            $('#other').click(function(){
+                $('form#target').submit();
+            });
+
+        });
+    </script>
+
+    <h1>Bài 31: Sự kiện submit form</h1>
+    <form id="target" action="#" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" name="sm_login" value="Login">
+    </form>
+
+    <a href="#" id="other">#other</a>
+
+
+</body>
+</html>

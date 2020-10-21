@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 18: Nhóm phương thức về Class</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+    <!-- Note:
+    
+        1. .addClass(className) -> Thêm một hoặc nhiều class vào mỗi phần tử trong bộ chọn
+        2. .removeClass(className) -> Xoá một, nhiều, hoặc tất cả các class của các phần tử trong bộ chọn
+        3. toggleClass(className) -> Thêm hoặc bỏ một, nhiều class của cá phần tử trong bộ chọn
+        4. .hasClass(className) -> Kiểm tra sự có mặt của class trong đối tượng chọn
+    
+    -->
+
+    <style>
+        .high_light{
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('p').click(function(){
+                // $(this).addClass('high_light');
+                // if(!$(this).hasClass('high_light')){
+                //     $('p').removeClass('high_light');
+                //     $(this).addClass('high_light');
+                // }
+                $('p').removeClass('high_light');
+                $(this).toggleClass('high_light'); //Giống như công tắt điện
+            });
+        });
+    </script>
+
+
+    <p>Đoạn văn bản 1</p>
+    <p>Đoạn văn bản 2</p>
+    <p>Đoạn văn bản 3</p>
+    <p>Đoạn văn bản 4</p>
+    <p>Đoạn văn bản 5</p>
+
+</body>
+</html>

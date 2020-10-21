@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 30: Sự kiện click</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Note:
+    
+        1. Đây là sự kiện giúp chúng ta thực thi các chức năng khi click chuột
+            vào một thành phần nào đó hoặc kích hoạt click trên một phần tử
+    
+    
+    -->
+
+
+    <style>
+        #target,
+        #other {
+            display: inline-block;
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        #target:hover,
+        #other:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('a#target').click(function () {
+                alert('Bạn vừa click vào #target');
+            });
+
+            $('a#other').click(function () {
+                $('a#target').click();
+            });
+        });
+    </script>
+
+
+    <h1>Bài 30: Sự kiện click</h1>
+    <a href="#" id="target">#target</a>
+    <a href="#" id="other">#other</a>
+
+</body>
+
+</html>

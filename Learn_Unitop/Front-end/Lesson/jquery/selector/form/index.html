@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 15: Nhóm selector về form</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <!--Note:
+        
+        1. $(":button") -> Chọn tất cả cá phần tử có type button
+        2. $(":checkbox") -> Chọn tất cả các phần tử có type checkbox
+        3. $(":password") -> Chọn phần tử có type password
+        4. $("input") -> Chọn tất cả các input, textarea, select, button
+        5. $(":file") -> Chọn tất cả các phần tử có type file
+        6. $(":radio") -> Chọn tất cả các phần tử có type radio
+        7. $(":selected") -> Chọn tất cả các phần tử có type selected
+        8. $(":text") -> Chọn tất cả các phần tử có type text
+        9. $(":enabled") -> Chọn tất cả các phần tử có type enabled
+        10. $(":disabled") -> Chọn tất cả các phần tử có type disabled
+    -->
+
+
+    <style>
+        form * {
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            //1. Đếm sô input trên form
+            // var num_input = $("form :input").length;
+            // alert(num_input);
+            //2. Input text => border: red
+            // $("form :text").css('border', '2px solid red');
+            //3. Input pass => border: red
+            // $("form :password").css('border', '2px solid red');
+            //4. Đếm số lượng phần tử select đã được chọn
+            // var input_select_seclected = $("form :selected").length;
+            // var input_select_seclected = $("form :selected");
+            // input_select_seclected.each(function(){
+            //     alert($(this).text());
+            // });
+            // var input_check_checked = $("form :checkbox:checked");
+            // input_check_checked.each(function(){
+            //     alert($(this).val());
+            // });
+            //5. phần tử disable -> border: red
+            // $("form :disabled").css('border', '2px solid red');
+            $("form :enabled").css('border', '2px solid red');
+           
+
+
+
+        });
+    </script>
+
+
+    <form action="">
+        <input type="text" name="">
+        <input type="password" name="" disabled="disabled">
+        <input type="checkbox" name="hobby" value="game" checked="checked">
+        <input type="checkbox" class="hobby" value="shopping">
+        <input type="checkbox" class="hobby" value="read_book" checked="checked">
+        <input type="radio" name="">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>Nút bấm</button>
+        <input type="submit" name="">
+        <input type="file" name="">
+        <select name="" id="">
+            <option value="">Lựa chọn</option>
+            <option value="" selected="selected">Php</option>
+            <option value=""></option>
+        </select>
+    </form>
+
+</body>
+
+</html>

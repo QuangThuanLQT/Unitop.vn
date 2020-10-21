@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính xoay đối tượng theo một góc cho trước - rotate</title>
+</head>
+<body>
+    <style>
+        /* 
+        cú pháp
+            transform: rotate(value)
+                value: 10deg, 20deg,..
+            ==> Giúp xoay phần tử với một góc cho trước 
+             */
+        .box{
+            height: 100px;
+            width: 200px;
+            padding: 10px;
+            background: green;
+            transition: all .5s;
+        }
+        .box:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+    <h1>Thuộc tính xoay đối tượng theo một góc cho trước - rotate</h1>
+    <div class="box">
+        Box
+    </div>
+</body>
+</html>

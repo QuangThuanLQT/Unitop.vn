@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính tịnh tiến khối so với vị trí ban đầu</title>
+</head>
+
+<body>
+    <style>
+        /* position: relative;
+            top: value;
+            left: value;
+            right: value;
+            bottom: value;
+
+        ===> Thuộc tính position relative giúp khối ở trạng thái có thể tịnh tiến
+                khi kết hợp với các thuộc tính phụ  top, left, right, bottom
+         */
+        .box {
+            background: burlywood;
+            width: 400px;
+            height: 200px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .box:hover {
+           
+            top: 10px;
+            left: 20px;
+        }
+    </style>
+    <h1>Thuộc tính tịnh tiến khối so với vị trí ban đầu</h1>
+    <div class="box">box</div>
+</body>
+
+</html>

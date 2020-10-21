@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cách viết rút gọn flex-basis, flex-grow, flex-shrink</title>
+</head>
+
+<body>
+
+    <style>
+        /* cú pháp:  */
+        /* flex: grow shrink basis */
+        /* flex:1; thì nó sẽ hiểu đó chính là flex-grow. */
+        /* flex:200px; thì nó sẽ hiểu là flex-basis. */
+        /* flex:1 200px; thì nó sẽ hiểu là flex-grow và flex-basis */
+        /* flex:1 2; thì nó sẽ hiểu là flex-grow và flex-shrink */
+        /* flex;1 2 300px thì sẽ lần lượt là flex-grow, flex-shrink và flex-basis. */
+        .container {
+            background: coral;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            background: cornflowerblue;
+            color: cornsilk;
+            font-size: 20px;
+        }
+    </style>
+    <h1>Cách viết rút gọn flex-basis, flex-grow, flex-shrink</h1>
+    <div class="container">
+        <div class="flex-item item-1">1</div>
+        <div class="flex-item item-2">2</div>
+    </div>
+</body>
+
+</html>

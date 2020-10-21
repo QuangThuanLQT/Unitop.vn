@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng nút like, share facebook vào webiste</title>
+</head>
+
+<body>
+    <!-- Cách làm:
+        link: https://developers.facebook.com/docs/plugins/
+    Check list:
+        1. Cấu hình
+        2. Lấy mã code
+        3. Dán vào website -->
+    <style>
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+    </style>
+    <!-- bỏ sau thẻ mở body -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0"
+        nonce="V22aBb7u"></script>
+    <!-- ===== -->
+    <div class="wrapper">
+        <h1>Nhúng nút like, share facebook vào webiste</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quis cupiditate magnam totam, ex amet
+            perferendis
+            placeat? Aliquam suscipit fuga sequi doloribus labore nesciunt, maiores a incidunt nostrum culpa quam quod
+            error
+            esse repellendus nihil veritatis inventore eligendi? Illum deleniti animi placeat, cum perferendis explicabo
+            neque nihil atque fugiat laborum dolorum architecto at reprehenderit quos porro unde! Harum, fugiat adipisci
+            quam consequatur ducimus tenetur, dignissimos voluptatem mollitia distinctio ullam atque! Minima veniam est
+            magni illo explicabo quod debitis odio commodi quidem corrupti, perspiciatis quae alias ullam aut eum dicta
+            sequi repudiandae asperiores? Perferendis est in saepe magni, maiores nesciunt quas?</p>
+        <p>Reprehenderit itaque, repellendus inventore ipsum vel blanditiis temporibus accusantium qui ab, sit voluptate
+            possimus quae aspernatur modi quibusdam dolorem aliquid natus omnis enim ducimus excepturi. Esse eveniet eum
+            illum at optio culpa corporis autem fugiat nisi nulla incidunt, numquam obcaecati ducimus, magnam eligendi
+            repellat, quas mollitia. Atque, numquam ullam nulla corporis quasi labore ipsam illum saepe, aliquid alias
+            neque, voluptate asperiores facilis! Aspernatur provident expedita voluptates odit dicta, totam ipsam sed
+            nesciunt repellendus molestiae, soluta reprehenderit est ea quisquam cumque sequi hic iusto fugiat
+            consectetur
+            assumenda ullam? Nobis cumque ad cum illum, vel iure dolore rem asperiores at, atque ipsa.</p>
+        <p>Facilis illo dolore explicabo blanditiis, molestiae labore neque adipisci iure, expedita mollitia quam!
+            Accusantium atque architecto doloremque, inventore, provident neque quasi dolorem asperiores, necessitatibus
+            eos
+            odit quae. Quas a qui sunt laborum debitis facere accusamus quisquam atque! Impedit ipsa ad sit eveniet
+            laborum
+            repellendus? Similique doloribus quo, expedita perspiciatis architecto molestias sint quae, debitis sunt
+            delectus nihil aliquam, excepturi ullam laborum libero? Nam fugit deleniti exercitationem, optio officia
+            minima
+            quae est officiis architecto asperiores provident tempora quo consequuntur unde eligendi quas sapiente
+            voluptates a laudantium sint reiciendis non quod voluptatibus iste. Veniam odio nam culpa? Consequuntur cum
+            dolore fugiat laborum!</p>
+
+        <!-- ==== -->
+        <div class="fb-like" data-href="http://unitop.vn" data-width="" data-layout="standard" data-action="like"
+            data-size="large" data-share="true"></div>
+        <!-- ==== -->
+        <!-- note: data-width="100%" ==> Thay đổi kích thước Comment facebook tương thích đa thiết bị  -->
+        <div class="fb-comments" data-href="http://unitop.vn" data-numposts="5" data-width="100%"></div>
+        <br>
+        <!-- ==== -->
+        <div class="fb-page" data-href="https://www.facebook.com/cuongunitop" data-tabs="" data-width="" data-height=""
+            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/cuongunitop" class="fb-xfbml-parse-ignore"><a
+                    href="https://www.facebook.com/cuongunitop">Phan Văn Cương - Chuyên gia Truyền nghề lập trình
+                    web</a>
+            </blockquote>
+        </div>
+    </div>
+</body>
+
+</html>

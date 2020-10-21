@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <title>Thêm icon fontawesome vào website</title>
+</head>
+
+<body>
+    <style>
+        /* <!-- Cách 2 -->
+            có  font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f2f5"; ==> mã icon nhớ thêm  dấu \
+        */
+        #login::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f2f5";
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+    <h1>Thêm icon fontawesome vào website</h1>
+    <!-- Cách 1 -->
+    <!-- <i class="fas fa-user"></i>
+    <i class="fab fa-github-square"></i>
+    <i class="fas fa-ambulance"></i> -->
+    <i class="fas fa-spinner fa-spin"></i>
+    <i class="fas fa-circle-notch fa-spin"></i>
+    <i class="fas fa-sync fa-spin"></i>
+    <!-- Cách 2 -->
+    <a id="login" href="">Login</a>
+
+</body>
+
+</html>

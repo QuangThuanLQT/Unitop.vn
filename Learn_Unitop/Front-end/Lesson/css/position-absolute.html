@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều chỉnh vị trí khối con trôi nổi trên một khối cha</title>
+</head>
+
+<body>
+    <style>
+        /* 
+            Thuộc tính position : absolute giúp một khối trôi nổi trên 
+             một khối cha bao quanh nó khi kết hợp với các thuộc tính phụ top, left, bottom, right        
+         */
+        .box-parent {
+            background: cornflowerblue;
+            width: 400px;
+            height: 200px;
+            position: relative;
+
+        }
+
+        .box-child {
+            background: coral;
+            color: cornsilk;
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+        }
+    </style>
+    <h1>Điều chỉnh vị trí khối con trôi nổi trên một khối cha</h1>
+    <div class="box-parent">
+        <div class="box-child">Child box</div>
+    </div>
+</body>
+
+</html>

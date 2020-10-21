@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 26: Hiệu ứng fade</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Note:
+        
+        1. .fadeIn() -> Hiển dần phần tử
+        2. .fadeOut() -> Ắn dần phần tử
+        3. .fadeToggle() -> Ắn dần hoặc hiện dần phần tử theo trạng thái
+        
+        -->
+
+    <style>
+        #box {
+            width: 400px;
+            padding: 40px;
+            background: #e74c3c;
+            text-align: center;
+            color: #ffffff;
+            display: none;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#effect-fadeIn").click(function () {
+                $('#box').fadeIn(1000);
+            });
+            $("#effect-fadeOut").click(function () {
+                $('#box').fadeOut(1000);
+            });
+            $("#effect-fadeToggle").click(function () {
+                $('#box').fadeToggle(1000);
+            });
+
+        });
+
+
+    </script>
+
+
+    <h1>Bài 26: Hiệu ứng fade</h1>
+    <a href="#" id="effect-fadeIn">Show</a>
+    <a href="#" id="effect-fadeOut">Hide</a>
+    <a href="#" id="effect-fadeToggle">Toggle</a>
+    <div id="box">BOX</div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat quis, sit voluptate similique repudiandae
+        repellendus distinctio, molestiae optio saepe nemo, corrupti natus delectus! Quae, commodi obcaecati aut quia
+        maiores saepe.</p>
+</body>
+
+</html>

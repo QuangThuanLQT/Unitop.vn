@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector loại trừ (:not)</title>
+</head>
+<body>
+    <style>
+        p:not(.active){
+            color: red;
+        }
+        p.active{
+            color: saddlebrown;
+            font-weight: bold;
+        }
+        #wrapper :not(p){
+            background-color: slateblue;
+        }
+    </style>
+<!-- chọn ra tất cả phần tử loại trù những phần tử trong bộ chọn khác được xác định -->
+    <div id="wrapper">
+        <h1>Selector loại trừ (:not)</h1>
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <p class="active">Item 3</p>
+        <p>Item 4</p>
+        <p>Item 5</p>
+        <a href="">Link 1</a>
+        <a href="">Link 2</a>
+        <div>Div 1</div>
+        <div>Div 2</div>
+    </div>
+</body>
+</html>

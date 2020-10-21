@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy tắc chống sập độ cao khi sử dụng float</title>
+</head>
+
+<body>
+    <style>
+        /* 
+            Note: Sập độ cao  là hiện tượng khi khối cha có các khối con bên trong đồng loạt float
+                dẫn đến độ cao của trở về 0.
+            Giải pháp: sử dụng clearfix chống sập độ cao
+        */
+        h1 {
+            text-align: center;
+        }
+
+        .box-parent {
+            width: 960px;
+            margin: 0px auto;
+            background-color: cadetblue;
+        }
+
+        .box-left,
+        .box-right {
+            min-height: 500px;
+            float: left;
+        }
+
+        .box-left {
+            width: 600px;
+            /* background: chocolate; */
+        }
+
+        .box-right {
+            width: 360px;
+            /* background: crimson; */
+        }
+
+        /* để trong file riêng reset để dùng chung */
+        .clearfix:after {
+            /* Trước tiên ta sẽ sử dụng bộ chọn "after" kết hợp với thuộc tính "content" để tạo thành phần tạm này */
+            content: ".";   /* sẽ cho ta một dấu "chấm" ngay sau thành phần */
+            display: block; /* để biến dấu "chấm" thành nhóm block. */
+            clear: both;    /*cho dấu "chấm" để ngăn cản sự ảnh hưởng của float */
+            height: 0; /* Chieu cao cua thanh phan bang 0 */
+            line-height: 0; /* Khoang cach cua dong bang 0 */
+            visibility: hidden; /* Xac dinh thanh phan khong dc nhin thay */
+        }
+
+        .clearfix {
+            clear: both;
+            display: block;
+        }
+    </style>
+    <h1>Class Clearfix</h1>
+    <!-- Cách 1
+        thêm trực tiếp vào thẻ  div bị sập độ cao -->
+    <div class="box-parent clearfix">
+        <div class="box-left">LEFT</div>
+        <div class="box-right">RIGHT</div>
+    </div>
+
+    <!-- Cách 2
+        thêm vào clearfix vào trước thẻ đóng của khối sập độ cao -->
+    <!-- <div class="box-parent">
+        <div class="box-left">LEFT</div>
+        <div class="box-right">RIGHT</div>
+        <div class="clearfix"></div>
+    </div> -->
+</body>
+
+</html>

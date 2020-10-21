@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 14: Nhóm selector lọc theo loại</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <!--Note:
+        
+        1. $(":first-of-type") -> Chọn phần tử đầu tiên trong các phần tử cùng cấp và cùng loại
+        2. $(":last-of-type") -> Chọn phần tử cuối cùng trong các phàn tử cùng cấp và cùng loại
+        3, $(":only-of-type") -> Chọn tất cả các phần tử chỉ có một phần tử duy nhất, không có các phần tử cùng loại và cùng cấp
+        
+     -->
+
+    
+    <script>
+        $(document).ready(function(){
+            //1. First-of-type
+            // $(".box h2:first-of-type").css('color', 'red')
+            //2. Last-of-type
+            // $(".box h2:last-of-type").css('color', 'red')
+            //3. Only-of-type
+            $(".box h2:only-of-type").css('color', 'red')
+        });
+    </script>
+
+    <div class="box">
+        <a href="">Link 1</a>
+        <p>Văn bản 1</p>
+        <h2>Tiêu đề 1</h2>
+        <a href="">Link 2</a>
+        <p>Văn bản 2</p>
+        <a href="">Link 3</a>
+        <p>Văn bản 3</p>
+        <h2>Tiêu đề 2</h2>
+        <h2>Tiêu đề 3</h2>
+        <h2>Tiêu đề 4</h2>
+    </div>
+    <div class="box">
+        <h2>Tiêu đề 5</h2>
+    </div>
+
+
+</body>
+</html>

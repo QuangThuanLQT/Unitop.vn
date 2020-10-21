@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 23: Nhóm phương thức kích thước</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!--Note:
+
+        1. .height() -> Lấy giá trị độ cao của phần tử đầu tiên trong bộ chọn
+        2. .height(value) -> Thiết lập độ cao cho các phần tử trong bộ chọn
+        3. innerHeight() -> Lấy giá trị độ cao của phần tử đầu tiên trong bộ chọn bao gồm padding
+        4. .outerHeight() -> Lấy giá trị độ cao của phần tử đầu tiên trong bộ chọn bao gồm cả padding, border
+        5. .width() -> Lấy giá trị độ rộng của phần tử đầu tiên trong bộ chọn
+        6. .width(value) -> Thiết lập độ cao cho các phần tử trong bộ chọn
+        7. innerWidth() -> Lấy giá trị độ rộng của phần tử đầu tiên trong bộ chọn bao gồm padding
+        8. .outerWidth() -> Lấy giá trị độ rộng của phần tử đầu tiên trong bộ chọn bao gồm cả padding, border
+        
+     -->
+
+    <style>
+        .box {
+            border: 1px solid #333;
+            min-height: 100px;
+            width: 200px;
+            margin: 10px 0px;
+            text-align: center;
+        }
+
+        #box-1 {
+            padding: 10px 20px;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function () {
+            var height_box_1, inner_height_box_1, outer_height_box_1
+            var width_box_1, inner_width_box_1, outer_width_box_1
+
+            height_box_1 = $('#box-1').height();
+            inner_height_box_1 = $('#box-1').innerHeight();
+            outer_height_box_1 = $('#box-1').outerHeight();
+
+            width_box_1 = $('#box-1').width();
+            inner_width_box_1 = $('#box-1').innerWidth();
+            outer_width_box_1 = $('#box-1').outerWidth();
+
+            console.log(height_box_1 + "-" + inner_height_box_1 + "-" + outer_height_box_1);
+            console.log(width_box_1 + "-" + inner_width_box_1 + "-" + outer_width_box_1);
+        
+            
+            $(".box").height(height_box_1);
+        
+        });
+    </script>
+
+    <h1>Phương thức xử lý kích thước trong jquery</h1>
+    <div class="box" id="box-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eaque nostrum error
+        recusandae amet facilis porro nam nemo obcaecati, ipsa voluptate, a fugit at aliquid quis rerum ullam nulla
+        quam. Quia a magni consectetur nostrum culpa ut quisquam amet illum vitae similique! Enim officiis sunt maiores
+        neque sequi voluptatibus est.
+    </div>
+    <div class="box" id="box-2">Box 2</div>
+    <div class="box" id="box-3"> Box 3</div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector before, after</title>
+</head>
+<body>
+    <!-- Thêm phần tử giả vào một phần tử cho trước -->
+    <style>
+        h1:before{
+            content: "⁂";
+            color: yellowgreen;
+        }
+        h1:after{
+            content: "⁂";
+            color: yellow;
+        }
+    </style>
+    <h1>Selector before, after</h1>
+    <ul>
+        <li><a href="">Bài viết số 1</a></li>
+        <li><a href="">Bài viết số 2</a></li>
+        <li><a href="">Bài viết số 3</a></li>
+        <li><a href="">Bài viết số 4</a></li>
+    </ul>
+</body>
+</html>

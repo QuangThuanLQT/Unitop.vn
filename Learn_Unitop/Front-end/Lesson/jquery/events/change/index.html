@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 33: Sự kiện change</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Note:
+            
+        1. Sự kiện giúp chúng ta thực thi chức năng khi thay đổi giá trị trong phần tử form.
+            Ngoài ra sử dụng nó để kích hoạt sự kiện change() lên một phần tử xác định.
+        Chú ý: Sự kiện áp dụng cho textarea, input text, select.
+    
+    -->
+
+
+    <style>
+        input,
+        select,
+        textarea {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('input#form_input_text').change(function () {
+                alert($(this).val());
+            });
+            $('select#form_select').change(function () {
+                alert($(this).val());
+            });
+            $('textarea#form_texteara').change(function () {
+                alert($(this).val());
+            });
+
+            $('#target').click(function () {
+                $('input#form_input_text').change();
+                return false;
+            });
+
+
+        });
+    </script>
+
+    <h1>Bài 33: Sự kiện change</h1>
+    <form action="#" method="POST">
+        <input type="text" name="form_input_text" id="form_input_text">
+        <select name="form_select" id="form_select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <textarea name="form_textarea" id="form_texteara" cols="30" rows="10"></textarea>
+        <a href="#" id="target">Kích hoạt</a>
+    </form>
+
+</body>
+
+</html>

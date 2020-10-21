@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính xử lý nội dung tràn khối</title>
+</head>
+
+<body>
+    <style>
+        /* 
+        overflow  ==> thuộc tính quyết định hiển thị kích thước nội dung vượt quá kích thước khối chứa nó */
+        .box {
+            width: 200px;
+            height: 300px;
+            border: 1px solid gray;
+            padding: 10px;
+            overflow: hidden;
+            /*
+            overflow: hidden; -> Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi.
+            overflow: auto; ->  Khi chiều cao của box không đủ chứa text, thì thanh scroll sẽ tự động hiển thị.
+                                Khi sử dụng thành phần này sẽ xuất hiện thanh scroll dọc.
+            overflow: visible; -> Khi chiều cao của box không đủ chứa text, thì text vẫn hiển thị tràn qua box,
+                                 đây là mặc định.
+            overflow: scroll; -> Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được dấu đi 
+                                và xuất hiện thanh scroll, khi cuộn sẽ hiển thị text.
+                                Khi sử dụng thành phần này sẽ xuất hiện cả thanh scroll ngang và dọc.
+            */
+        }
+    </style>
+    <h1>Thuộc tính xử lý nội dung tràn khối</h1>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. At facere fuga itaque! Nemo totam non delectus veniam
+        hic, blanditiis aliquid provident quos reiciendis obcaecati ratione! Laboriosam, repellendus aliquid. Mollitia
+        nobis sapiente asperiores itaque nulla impedit labore excepturi aliquam tempora laborum architecto iure a sed,
+        facere veritatis, animi tempore adipisci recusandae. Atque corrupti ipsam suscipit adipisci odio, ipsa repellat?
+        Sed nisi fugiat error, sit quidem vitae explicabo tenetur corporis consequuntur sapiente blanditiis ipsum nulla
+        non amet! Enim, quidem praesentium repellat sint neque adipisci beatae laborum, qui sed fugit velit magnam
+        aliquam excepturi. Quasi officia excepturi consequatur qui ea inventore ab recusandae?
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính quy định tỉ lệ co flex shrink</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            background: coral;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-item {
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            background: cornflowerblue;
+            color: cornsilk;
+            font-size: 20px;
+        }
+
+        .item-1 {
+            flex-basis: 200px;
+            flex-shrink: 1;
+        }
+
+        .item-2 {
+            flex-basis: 500px;
+            flex-shrink: 2;
+        }
+    </style>
+    <h1>Thuộc tính quy định tỉ lệ co flex shrink</h1>
+    <div class="container">
+        <div class="flex-item item-1">1</div>
+        <div class="flex-item item-2">2</div>
+    </div>
+</body>
+
+</html>

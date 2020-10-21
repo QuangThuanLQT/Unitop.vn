@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuộc tính làm trong suốt khối - opacity</title>
+</head>
+
+<body>
+    <style>
+        /* 
+        opacity: 0.3; -> Độ trong suốt của thành phần phụ thuộc vào giá trị.
+        opacity: inherit;	Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài).*/
+        /* position: fixed; ==> cố định một khối khi kéo thanh cuộn website */
+        #wrapper {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #header {
+            background: cyan;
+            text-align: center;
+            padding: 20px 0px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: darkorange;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            /* bottom: 0; */
+            left: 0;
+            /* width: inherit; ==>Xác định thừa hưởng thuộc tính từ thành phần cha (thành phần bao ngoài). */
+            opacity: 0.8;
+            /* opacity: inherit; */
+        }
+
+        #content {
+            /* margin-top: 70px; */
+            position: relative;
+            top: 50px;
+            z-index: -10;
+        }
+    </style>
+    <div id="wrapper">
+        <div id="header">
+            Unitop.vn
+        </div>
+        <div id="content">
+            <h1>Thuộc tính làm trong suốt khối - opacity</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, quaerat reprehenderit? Culpa nemo
+                dignissimos tempora minima dicta veniam tenetur repudiandae! Numquam porro officiis iusto provident quas
+                reprehenderit recusandae, natus cumque consequuntur dolor optio aliquid? Dolor consequatur vero, commodi
+                dolorem expedita temporibus. At cumque inventore totam ipsam vitae excepturi voluptas iste!</p>
+            <p>Enim temporibus doloribus eos! Ratione, laboriosam et eos esse quam asperiores sed voluptatibus minima
+                atque rem perspiciatis obcaecati magnam, reprehenderit explicabo consequatur quasi natus in, soluta
+                saepe nesciunt? Nemo quis ipsum nam est accusamus dolor velit eum beatae pariatur quisquam,
+                reprehenderit illum natus dignissimos sunt molestias dolore, voluptatibus placeat nesciunt?</p>
+            <p>Tenetur accusantium praesentium vero quas, saepe et impedit id distinctio modi! Blanditiis quidem et,
+                labore aliquid ipsa eos, ea ipsam maxime distinctio fuga iste. Eos ratione, tenetur doloremque quibusdam
+                ducimus a quaerat, at impedit est vel inventore corrupti. Labore, quisquam? Deleniti corrupti beatae
+                fugiat voluptate doloribus optio vel saepe nisi!</p>
+            <p>Ducimus, tenetur? Ullam officia unde libero iusto itaque, delectus iure eius esse voluptas nemo
+                explicabo, sunt corrupti quasi voluptatum quia aliquam tempora mollitia dolore, ipsa dolorum! Quod
+                voluptatum numquam excepturi nisi? Quidem ut odio ipsa in adipisci, nesciunt corporis? Odio fugiat
+                asperiores necessitatibus a corrupti, repellat commodi assumenda cupiditate veniam?</p>
+            <p>Iste hic quam maxime mollitia esse corporis rem earum iusto totam, doloremque optio. Non nemo est eius,
+                quasi aliquam ad totam voluptatibus obcaecati eos amet molestiae inventore cupiditate unde animi
+                molestias corrupti autem rem aliquid vitae minus dolorem nesciunt optio maiores perspiciatis! Ducimus,
+                aperiam sequi amet vitae illo voluptatum officiis.</p>
+            <p>Temporibus porro labore odio ratione hic omnis reiciendis sapiente quasi dolores! Animi eum quas
+                perspiciatis vitae quia nemo reprehenderit corrupti qui ipsum quae illum asperiores dolore repellendus
+                magni impedit dignissimos iure accusamus corporis commodi nulla hic maiores, expedita, libero sapiente?
+                Alias consequuntur vel deserunt quis dolor laborum cum, eaque quisquam.</p>
+            <p>Distinctio tempore at, aut incidunt repudiandae quo itaque veniam eum officia impedit culpa commodi sint
+                dolores natus. Explicabo consectetur harum fugit est atque ratione laborum maxime possimus reprehenderit
+                expedita laudantium sed unde recusandae, ad, excepturi architecto dolore nulla aspernatur error. Eos
+                deserunt neque sed reiciendis voluptatibus, minima quo deleniti nisi!</p>
+            <p>Dolores expedita ad dolorem corporis alias deleniti recusandae ut eveniet exercitationem unde quis
+                corrupti vitae ullam cumque modi obcaecati debitis ipsam fuga facilis, accusantium incidunt quas harum
+                quidem? Nostrum doloremque molestiae maiores. Debitis totam ratione sit ducimus eveniet repudiandae vel
+                tempore, necessitatibus fugiat hic magnam labore velit numquam. Fugit, nemo.</p>
+            <p>Temporibus porro labore odio ratione hic omnis reiciendis sapiente quasi dolores! Animi eum quas
+                perspiciatis vitae quia nemo reprehenderit corrupti qui ipsum quae illum asperiores dolore repellendus
+                magni impedit dignissimos iure accusamus corporis commodi nulla hic maiores, expedita, libero sapiente?
+                Alias consequuntur vel deserunt quis dolor laborum cum, eaque quisquam.</p>
+            <p>Distinctio tempore at, aut incidunt repudiandae quo itaque veniam eum officia impedit culpa commodi sint
+                dolores natus. Explicabo consectetur harum fugit est atque ratione laborum maxime possimus reprehenderit
+                expedita laudantium sed unde recusandae, ad, excepturi architecto dolore nulla aspernatur error. Eos
+                deserunt neque sed reiciendis voluptatibus, minima quo deleniti nisi!</p>
+            <p>Dolores expedita ad dolorem corporis alias deleniti recusandae ut eveniet exercitationem unde quis
+                corrupti vitae ullam cumque modi obcaecati debitis ipsam fuga facilis, accusantium incidunt quas harum
+                quidem? Nostrum doloremque molestiae maiores. Debitis totam ratione sit ducimus eveniet repudiandae vel
+                tempore, necessitatibus fugiat hic magnam labore velit numquam. Fugit, nemo.</p>
+            <p>Temporibus porro labore odio ratione hic omnis reiciendis sapiente quasi dolores! Animi eum quas
+                perspiciatis vitae quia nemo reprehenderit corrupti qui ipsum quae illum asperiores dolore repellendus
+                magni impedit dignissimos iure accusamus corporis commodi nulla hic maiores, expedita, libero sapiente?
+                Alias consequuntur vel deserunt quis dolor laborum cum, eaque quisquam.</p>
+            <p>Distinctio tempore at, aut incidunt repudiandae quo itaque veniam eum officia impedit culpa commodi sint
+                dolores natus. Explicabo consectetur harum fugit est atque ratione laborum maxime possimus reprehenderit
+                expedita laudantium sed unde recusandae, ad, excepturi architecto dolore nulla aspernatur error. Eos
+                deserunt neque sed reiciendis voluptatibus, minima quo deleniti nisi!</p>
+            <p>Dolores expedita ad dolorem corporis alias deleniti recusandae ut eveniet exercitationem unde quis
+                corrupti vitae ullam cumque modi obcaecati debitis ipsam fuga facilis, accusantium incidunt quas harum
+                quidem? Nostrum doloremque molestiae maiores. Debitis totam ratione sit ducimus eveniet repudiandae vel
+                tempore, necessitatibus fugiat hic magnam labore velit numquam. Fugit, nemo.</p>
+            <p>Temporibus porro labore odio ratione hic omnis reiciendis sapiente quasi dolores! Animi eum quas
+                perspiciatis vitae quia nemo reprehenderit corrupti qui ipsum quae illum asperiores dolore repellendus
+                magni impedit dignissimos iure accusamus corporis commodi nulla hic maiores, expedita, libero sapiente?
+                Alias consequuntur vel deserunt quis dolor laborum cum, eaque quisquam.</p>
+            <p>Distinctio tempore at, aut incidunt repudiandae quo itaque veniam eum officia impedit culpa commodi sint
+                dolores natus. Explicabo consectetur harum fugit est atque ratione laborum maxime possimus reprehenderit
+                expedita laudantium sed unde recusandae, ad, excepturi architecto dolore nulla aspernatur error. Eos
+                deserunt neque sed reiciendis voluptatibus, minima quo deleniti nisi!</p>
+            <p>Dolores expedita ad dolorem corporis alias deleniti recusandae ut eveniet exercitationem unde quis
+                corrupti vitae ullam cumque modi obcaecati debitis ipsam fuga facilis, accusantium incidunt quas harum
+                quidem? Nostrum doloremque molestiae maiores. Debitis totam ratione sit ducimus eveniet repudiandae vel
+                tempore, necessitatibus fugiat hic magnam labore velit numquam. Fugit, nemo.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

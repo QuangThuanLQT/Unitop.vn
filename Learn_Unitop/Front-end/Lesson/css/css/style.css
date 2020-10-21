@@ -1,0 +1,47 @@
+h1{
+    color: blueviolet;
+}
+
+
+/* ===== HEADER ====== */
+
+#heager{
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: darkgreen;
+}
+
+
+
+/* -----menu------- */
+
+/*set background menu*/
+
+ul#main-menu{
+    background-color: darkmagenta;
+}
+
+
+/* -----search------- */
+
+
+
+/* ===== CONTAINER ====== */
+
+
+
+
+/* .post-title{
+    color: rgb(211, 60, 0);
+} */
+
+#home-title{
+    color: forestgreen;
+}
+
+h1#home-title{
+    color: rgb(139, 34, 43);
+}
+
+
+

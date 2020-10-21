@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng layout web 2 cột flex</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrapper {
+            max-width: 960px;
+            /* chú ý :
+                sử dụng max-width sẽ cải thiện khả năng xử lý với cửa sổ nhỏ của trình duyệt. 
+                Điều này rất quan trọng khi tạo một trang web có thể sử dụng được trên các thiết bị nhỏ
+             */
+            margin: 0 auto;
+        }
+
+        .bg-blue {
+            background: blue;
+        }
+
+        .bg-f3 {
+            background: #f3f3f3;
+        }
+
+        .bg-e5 {
+            background: #e5e5e5;
+        }
+
+        .p-15 {
+            padding: 15px;
+        }
+
+        .pt-15 {
+            padding-top: 15px;
+        }
+
+        .pb-15 {
+            padding-bottom: 15px;
+        }
+
+        .pt-10 {
+            padding-top: 10px;
+        }
+
+        .pb-10 {
+            padding-bottom: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        #wp-content {
+            display: flex;
+            flex-direction: row;
+            align-content: stretch;
+            min-height: 500px;
+        }
+
+        #content {
+            flex: 1 1 600px;
+
+        }
+
+        #sidebar {
+            flex: 1 1 360px;
+
+        }
+    </style>
+    <div id="wrapper">
+        <div id="header" class="bg-blue">
+            <h2 class="pt-15 pb-15 text-center text-white">Layout web 2 Cột- Flex Css</h2>
+        </div>
+        <div id="wp-content">
+            <div id="content" class="bg-f3 p-15">
+                <p>Content</p>
+            </div>
+            <div id="sidebar" class="bg-e5 p-15">
+                <p>Sidebar</p>
+            </div>
+        </div>
+        <div id="footer" class="bg-blue">
+            <p class="pt-10 pb-10 text-center text-white">Unitop.vn</p>
+        </div>
+    </div>
+</body>
+
+</html>
