@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bài 3: Alert Và Button Trong Bootstrap</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+	<!-- 
+		Alert – Thông báo
+Cách sử dụng: dùng class alert alert-*loại alert*
+
+Có tất cả 8 loại alert với 8 màu mang ý nghĩa khác nhau:
+
+	+ primary: thông thường
+
+	+ secondary: thông báo thứ cấp
+
+	+ success: thông báo thành công
+
+	+ danger: thông báo nguy hiểm
+
+	+ warning: cảnh báo
+
+	+ info: thông báo thông tin
+
+	+ light: màu sáng
+
+	+ dark: màu tối
+
+
+	================================================
+
+Button – Nút
+Để dùng button, các bạn sử dụng class=” btn btn-*loại button*”
+
+Tương tự Alert, Button cũng có 8 loại class mang 8 màu khác nhau và có thêm 1 loại là button link.
+
+	+ primary: thông thường
+
+	+ secondary: thông báo thứ cấp
+
+	+ success: thông báo thành công
+
+	+ danger: thông báo nguy hiểm
+
+	+ warning: cảnh báo
+
+	+ info: thông báo thông tin
+
+	+ light: màu sáng
+
+	+ dark: màu tối
+
+	+ link: thể hiện đường dẫ
+	================================================
+	
+	Kết hợp Alert và Button
+
+Các class cần chú ý của alert:
+
+	+ alert-dismissible: cho phép đóng thông báo
+
+	+ fade show: hiệu ứng biến mất
+
+Các class cần có của button: class=”close”
+
+Ngoài ra, chúng ta thêm 2 attribute (thuộc tính) sau: data-dismiss=”alert” và aria-label=”Close”
+	============================================
+
+Breadcrumb dùng để hiện thị đường dẫn để xem bài viết.
+Cách dùng: sử dụng class=”breadcrumb” và “breadcrumb=item”. Class=“active” 
+để cho biết vị trí hiện tại của bạn. Dùng các thẻ nav, ol, li
+	============================================
+
+Dùng badge để nhấn mạnh nội dung như new, hot.
+Cách dùng class=”badge badge-*loại badge*”
+ 	-->
+
+	<div class="container">
+		<div class="row main">
+			<div class="col-md-4">
+				<div class="alert alert-danger">Quay lại</div>
+				<div class="alert alert-info">Thông tin thêm</div>
+			</div>
+			<div class="col-md-5">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item active" aria-current="page"><a href="">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page"><a href="">Chuyên mục 1</a></li>
+						<li class="breadcrumb-item" aria-current="page">Bài viết <span
+								class="badge badge-info">New</span></li>
+					</ol>
+				</nav>
+			</div>
+			<div class="col-md-3">
+				<button class="btn btn-success">OK</button>
+			</div>
+		</div>
+
+		
+		<div class="row main">
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- Load jquery trước khi load bootstrap js -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

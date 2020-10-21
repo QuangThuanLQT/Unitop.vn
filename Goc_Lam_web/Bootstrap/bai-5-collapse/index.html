@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bài 5: Collapse – Ẩn Hiện Nội Dung Trong Bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+	<!-- 
+
+		Phần điều khiển
+Các bạn có thể dùng 1 button hoặc thẻ a. Định dạng tùy theo ý bạn nhé. Điều quan trọng là phải có những thuộc tính sau:
+
+	+ data-toggle=”collapse”
+
+	+ data-target=”#id-collapse-noidung”. Trong ví dụ, mình dùng #noi-dung-collapse. Nhớ phải có dấu # .
+
+	 -->
+
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-md-4">
+				<button class="btn btn-oultline-info" type="button" data-toggle="collapse"
+					data-target="#noi-dung-collapse">Xem thêm</button>
+
+				<a href="" class="btn btn-secondary" role="button" data-toggle="collapse"
+					data-target="#noi-dung-collapse">Link xem thêm</a>
+					
+				<div class="collapse" id="noi-dung-collapse">
+					<p class="card card-body">Distinctio praesent eros, quibusdam nibh? Euismod. Per magni, id dolore
+						hymenaeos excepturi incidunt eius. Necessitatibus natus faucibus corporis, quam dolores ante
+						minus risus perspiciatis, voluptatum turpis etiam vero excepturi luctus augue donec esse optio
+						auctor pulvinar! Vulputate quas eiusmod. Quod lobortis volutpat! Aliquam possimus incididunt
+						excepteur sodales eius semper rem, possimus? Rem, purus accusantium repellendus iure tempor
+						quis.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load jquery trước khi load bootstrap js -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

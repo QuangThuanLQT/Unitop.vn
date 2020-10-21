@@ -1,0 +1,4 @@
+.style-grid [class^="col"]{  /* tìm all class bắt đầu là col bên trong class style-grid */
+background: #ccc;
+border: 1px solid #ddd;
+}

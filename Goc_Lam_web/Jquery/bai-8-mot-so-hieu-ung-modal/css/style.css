@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #fafafa;
+    width: 100%;
+    height: 100%;
+}
+.cac-nut {
+    width:  40%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.cac-nut button {
+    background: #fafafa;
+    box-shadow:  none;
+    padding: 5px 10px;
+    border: 1px solid #177695;
+    color:  #177695;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cac-nut button:hover {
+    background:  #177695;
+    color: #fafafa;
+}
+.khoi{
+    position:  absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    z-index: 2;
+    perspective: 1500px;
+}
+.dialog {
+    position:  absolute;
+    width: 500px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.dialog img {
+    width:  100%;
+    position: relative;
+}
+.dialog button {
+    font-size: 20px;
+    width: 40px;
+    height:  40px;
+    position:  absolute;
+    top: 0px;
+    right:  0px;
+    border:  none;
+    color:  #fafafa;
+    background: #b91717;
+    cursor: pointer;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: #7f8ca06e;
+    top: 0px;
+    left: 0px;
+    transition: 0.4s;
+    opacity: 0;
+    visibility: hidden;
+}
+.show{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.6s;
+}
+
+/*hieu-ung-1*/
+.dialog-1{
+    transform: translateZ(-1500px) rotateY(70deg);
+}
+.dialog-1.show{
+    opacity: 1;
+    visibility: visible;
+    animation: hien-ra 1s forwards;
+}
+@-webkit-keyframes hien-ra{
+    0%{
+        transform: translateZ(-1500px) rotateY(70deg);
+    }
+    50%{
+        transform: translateZ(100px) rotateY(70deg);
+    }
+    100%{
+        transform: translateZ(100px) rotateY(0deg);
+    }
+}
+
+.dialog-2{
+    /*tâm quay*/
+    /*transform-origin: 0% 100%; */
+    transform: rotateY(90deg);
+}
+.dialog-2.show{
+    opacity: 1;
+    visibility: visible;
+    transform: rotateY(0deg);
+}
+
+.dialog-3{
+    /*tâm quay*/
+    /*transform-origin: 100% 0% ; */
+    transform: rotateX(-90deg);
+}
+.dialog-3.show{
+    opacity: 1;
+    visibility: visible;
+    transform: rotateX(0deg);
+}
+
+.dialog-4{
+    /*tâm quay*/
+    /*transform-origin: 100% 0% ; */
+    transform: scale(0.1);
+}
+.dialog-4.show{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.dialog-5{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.dialog-5.show{
+    transform: scale(1.5);
+}
+
+.dialog-6{
+    transform: scale(0) translateX(500px) translateX(500px) rotate(720deg);
+    transition: 0.8s;
+}
+.dialog-6.show{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.8s;
+    transform: scale(1) translateX(0) translateX(0) rotate(0deg);
+}

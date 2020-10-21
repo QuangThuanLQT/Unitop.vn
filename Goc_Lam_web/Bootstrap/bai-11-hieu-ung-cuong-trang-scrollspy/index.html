@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bài 11: Scrollspy - Hiệu ứng điều hướng khi cuộn trang trong Bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+	<!-- 
+		Thanh menu gồm các class:
+
++ navbar: tạo thanh menu
+
++ navbar-light bg-light: màu nền
+
++ justify-content-start: canh lề trái cho các thẻ a bên trong
+
++ sticky-top: cố định menu khi cuộn trang
+
+Và đặc biệt thẻ nav cần có id
+
+Thẻ a: điều quan trọng là phải có href=”#id-khối nội-dung”
+
+Thêm data-spy = "scroll" vào phần tử sẽ được sử dụng làm vùng có thể cuộn (thường đây là phần tử <body>).
+Sau đó, thêm thuộc tính data-target với giá trị là id hoặc tên lớp của thanh điều hướng (.navbar). 
+Điều này là để đảm bảo rằng thanh điều hướng được kết nối với vùng có thể cuộn
+	 -->
+
+
+	<div class="container">
+		<nav class="navbar navbar-light bg-light justify-content-start sticky-top" id="my-menu">
+			<a class="navbar-brand" href="#">Menu</a>
+			<ul class="nav nav-fill">
+				<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+				<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div data-spy="scroll" data-target="#my-menu" data-offset="10">
+			<div id="home" style="padding-top: 70px;">
+				<h2>Home</h2>
+				<p>Omnis dignissim, facere necessitatibus repudiandae pede sapiente penatibus lorem magni in
+					voluptatibus, mollitia, molestie, libero eum, eros in, eleifend laoreet vestibulum, rhoncus? Modi
+					occaecat, non minus debitis excepteur praesent aut voluptatem torquent cubilia, urna magna, omnis,
+					rhoncus soluta mollitia adipiscing tempor quidem non iusto molestiae, dicta ex. Cubilia dui cubilia,
+					pede habitant maxime culpa, quos dicta. Veniam laboriosam sociis orci. Fuga iste phasellus voluptas.
+					Culpa exercitationem felis provident! Aspernatur sem cum integer, dui nostrud, vero. Posuere
+					voluptates eius iusto sociosqu, tristique curae, justo pharetra pulvinar doloribus qui commodi
+					taciti quod dolore sollicitudin hymenaeos integer, faucibus dolor. Ante corrupti, aliquet accumsan.
+				</p>
+
+				<p>Cras turpis nibh posuere lacinia nobis hac minus blandit, tristique imperdiet volutpat, doloremque
+					feugiat eveniet ullam eius, leo sunt rerum! Massa quaerat? Varius, lectus! Congue. Risus tellus
+					euismod nobis sit. Ex integer eleifend pellentesque enim proin, expedita ea nec. Ligula, aliquet
+					ullamco, hic omnis commodi suspendisse elit ad? Volutpat suspendisse distinctio omnis, temporibus
+					reprehenderit, dignissimos mauris, porta facilisi facilisi minim, eligendi nostra excepturi enim
+					maiores velit? Odit minim irure augue, eveniet exercitation officia curae nisl sed excepturi eros
+					placerat nibh. Incididunt suscipit ipsum nunc laboriosam harum tortor inceptos vitae rutrum.
+					Quibusdam, ultricies ornare quisquam molestie exercitation, magna aliquip occaecat! Sollicitudin.
+				</p>
+
+				<p>Praesent dictumst metus adipisicing mollit, semper laboris perspiciatis mi nibh vulputate dolore,
+					deserunt! Adipisicing senectus ligula mus maiores, vestibulum, enim malesuada lectus magni
+					exercitationem, vestibulum nulla sit cum viverra commodo, voluptatem, commodi vestibulum ducimus
+					blandit facilis, proident habitant vehicula irure egestas culpa voluptatum, laoreet, ab, vitae! Rem
+					possimus, fringilla habitant dolores nostrum, torquent facilis voluptate perspiciatis cubilia,
+					volutpat nascetur facere. Dui tellus fugiat aut fugiat adipiscing, cursus fermentum, dolorum odio
+					excepteur netus, quam aliquet esse porro necessitatibus. In delectus laudantium! Tortor iusto,
+					tortor condimentum, torquent? Dolores massa cumque tempus sollicitudin saepe, nobis tortor rhoncus
+					neque! Hendrerit? Vel amet? Et duis.</p>
+			</div>
+			<div id="product" style="padding-top: 70px;">
+				<h2>Product</h2>
+				<p>Omnis dignissim, facere necessitatibus repudiandae pede sapiente penatibus lorem magni in
+					voluptatibus, mollitia, molestie, libero eum, eros in, eleifend laoreet vestibulum, rhoncus? Modi
+					occaecat, non minus debitis excepteur praesent aut voluptatem torquent cubilia, urna magna, omnis,
+					rhoncus soluta mollitia adipiscing tempor quidem non iusto molestiae, dicta ex. Cubilia dui cubilia,
+					pede habitant maxime culpa, quos dicta. Veniam laboriosam sociis orci. Fuga iste phasellus voluptas.
+					Culpa exercitationem felis provident! Aspernatur sem cum integer, dui nostrud, vero. Posuere
+					voluptates eius iusto sociosqu, tristique curae, justo pharetra pulvinar doloribus qui commodi
+					taciti quod dolore sollicitudin hymenaeos integer, faucibus dolor. Ante corrupti, aliquet accumsan.
+				</p>
+
+				<p>Cras turpis nibh posuere lacinia nobis hac minus blandit, tristique imperdiet volutpat, doloremque
+					feugiat eveniet ullam eius, leo sunt rerum! Massa quaerat? Varius, lectus! Congue. Risus tellus
+					euismod nobis sit. Ex integer eleifend pellentesque enim proin, expedita ea nec. Ligula, aliquet
+					ullamco, hic omnis commodi suspendisse elit ad? Volutpat suspendisse distinctio omnis, temporibus
+					reprehenderit, dignissimos mauris, porta facilisi facilisi minim, eligendi nostra excepturi enim
+					maiores velit? Odit minim irure augue, eveniet exercitation officia curae nisl sed excepturi eros
+					placerat nibh. Incididunt suscipit ipsum nunc laboriosam harum tortor inceptos vitae rutrum.
+					Quibusdam, ultricies ornare quisquam molestie exercitation, magna aliquip occaecat! Sollicitudin.
+				</p>
+
+				<p>Praesent dictumst metus adipisicing mollit, semper laboris perspiciatis mi nibh vulputate dolore,
+					deserunt! Adipisicing senectus ligula mus maiores, vestibulum, enim malesuada lectus magni
+					exercitationem, vestibulum nulla sit cum viverra commodo, voluptatem, commodi vestibulum ducimus
+					blandit facilis, proident habitant vehicula irure egestas culpa voluptatum, laoreet, ab, vitae! Rem
+					possimus, fringilla habitant dolores nostrum, torquent facilis voluptate perspiciatis cubilia,
+					volutpat nascetur facere. Dui tellus fugiat aut fugiat adipiscing, cursus fermentum, dolorum odio
+					excepteur netus, quam aliquet esse porro necessitatibus. In delectus laudantium! Tortor iusto,
+					tortor condimentum, torquent? Dolores massa cumque tempus sollicitudin saepe, nobis tortor rhoncus
+					neque! Hendrerit? Vel amet? Et duis.</p>
+			</div>
+			<div id="contact" style="padding-top: 70px; padding-bottom: 70px;">
+				<h2>Contact</h2>
+				<p>Omnis dignissim, facere necessitatibus repudiandae pede sapiente penatibus lorem magni in
+					voluptatibus, mollitia, molestie, libero eum, eros in, eleifend laoreet vestibulum, rhoncus? Modi
+					occaecat, non minus debitis excepteur praesent aut voluptatem torquent cubilia, urna magna, omnis,
+					rhoncus soluta mollitia adipiscing tempor quidem non iusto molestiae, dicta ex. Cubilia dui cubilia,
+					pede habitant maxime culpa, quos dicta. Veniam laboriosam sociis orci. Fuga iste phasellus voluptas.
+					Culpa exercitationem felis provident! Aspernatur sem cum integer, dui nostrud, vero. Posuere
+					voluptates eius iusto sociosqu, tristique curae, justo pharetra pulvinar doloribus qui commodi
+					taciti quod dolore sollicitudin hymenaeos integer, faucibus dolor. Ante corrupti, aliquet accumsan.
+				</p>
+
+				<p>Cras turpis nibh posuere lacinia nobis hac minus blandit, tristique imperdiet volutpat, doloremque
+					feugiat eveniet ullam eius, leo sunt rerum! Massa quaerat? Varius, lectus! Congue. Risus tellus
+					euismod nobis sit. Ex integer eleifend pellentesque enim proin, expedita ea nec. Ligula, aliquet
+					ullamco, hic omnis commodi suspendisse elit ad? Volutpat suspendisse distinctio omnis, temporibus
+					reprehenderit, dignissimos mauris, porta facilisi facilisi minim, eligendi nostra excepturi enim
+					maiores velit? Odit minim irure augue, eveniet exercitation officia curae nisl sed excepturi eros
+					placerat nibh. Incididunt suscipit ipsum nunc laboriosam harum tortor inceptos vitae rutrum.
+					Quibusdam, ultricies ornare quisquam molestie exercitation, magna aliquip occaecat! Sollicitudin.
+				</p>
+
+				<p>Praesent dictumst metus adipisicing mollit, semper laboris perspiciatis mi nibh vulputate dolore,
+					deserunt! Adipisicing senectus ligula mus maiores, vestibulum, enim malesuada lectus magni
+					exercitationem, vestibulum nulla sit cum viverra commodo, voluptatem, commodi vestibulum ducimus
+					blandit facilis, proident habitant vehicula irure egestas culpa voluptatum, laoreet, ab, vitae! Rem
+					possimus, fringilla habitant dolores nostrum, torquent facilis voluptate perspiciatis cubilia,
+					volutpat nascetur facere. Dui tellus fugiat aut fugiat adipiscing, cursus fermentum, dolorum odio
+					excepteur netus, quam aliquet esse porro necessitatibus. In delectus laudantium! Tortor iusto,
+					tortor condimentum, torquent? Dolores massa cumque tempus sollicitudin saepe, nobis tortor rhoncus
+					neque! Hendrerit? Vel amet? Et duis.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load jquery trước khi load bootstrap js -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

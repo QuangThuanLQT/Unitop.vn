@@ -1,0 +1,124 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+.cac-nut {
+	width:  1000px;
+	margin: auto;
+	text-align:  center;
+	margin-top: 100px;
+}
+button.open {
+	background:  transparent;
+	box-shadow:  none;
+	border: 1px solid #2587b9;
+	color:  #2587b9;
+	padding: 10px 12px;
+	border-radius: 50px;
+	cursor:pointer;
+}
+button.open:hover{
+	background: #2587b9;
+	color:  #fafafa; 
+}
+.khoi{
+	perspective: 1500px;
+	/*Thuộc tính perspective sẽ cho ta thấy được chiều sâu của thành phần, 
+		khoảng chiều sâu được tính từ điểm đặt ban đầu 
+		tới giá trị của perspective (theo đơn vị pixel).
+		*/
+	}
+	.hop-thoai {
+		width:  500px;
+		position:  absolute;
+		top: 27%;
+		left: 50%;
+		margin-left:  -250px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateZ(-1500px) rotateY(70deg);
+	}
+	.hop-thoai img{
+		position: absolute;
+		z-index: 1;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	.hop-thoai button.close{
+		position: absolute;
+		z-index: 2;
+		right: 0px;
+		top: 0px;
+		background:  red;
+		width: 40px;
+		height: 40px;
+		color: #fafafa;
+	}
+	.background{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: rgb(0,0,0,0.35);
+		opacity: 0;
+		visibility: hidden;
+	}
+	.show{
+		opacity: 1;
+		visibility: visible;
+		transition: 0.6s;
+	}
+	.hop-thoai.show{
+		opacity: 1;
+		visibility: visible;
+		animation: hien-ra 1s forwards;	
+	/*Thuộc tính animation xác định một chuyển động 
+	của một tag hay một hình ảnh, là sự tổng hợp 
+	của các thuộc tính:
+		animation-name --> Xác định tên cho một animation, 
+		animation-duration --> Xác định thời gian để hoàn thành một chuyển động, mặc định là 0s.,
+	 animation-timing-function, animation-delay,
+	 animation-iteration-count, animation-direction.*/
+	}
+	/*-webkit-: Hien thi cho Safari and Chrome */
+	@-webkit-keyframes hien-ra{
+	/*	Thuộc tính @keyframes
+	-Thuộc tính này có tác dụng thiết lập một chuyển động.*/
+		0%{
+			transform: translateZ(-1500px) rotateY(70deg);
+		}
+		50%{
+			transform: translateZ(0px) rotateY(70deg);
+		}
+		100%{
+			transform: translateZ(0px) rotateY(0deg);
+		}
+	}
+
+
+
+
+	/*Thuộc tính của animation trong css3:
+	Thuộc tính			giá trị			Ví dụ							Mô tả
+		animation-name	tên animation	animation-name: myAnimation;	Xác định tên cho một animation.
+		animation-duration	thời gian	animation-duration: 5s;	Xác định thời gian để hoàn thành một chuyển động, mặc định là 0s.
+		animation-timing-function	linear	animation-timing-function: linear;	Chuyển động sẽ cùng tốc độ từ lúc bắt đầu tới lúc kết thúc.
+		ease	animation-timing-function: ease;	Chuyển động ban đầu sẽ chậm, sau đó nhanh, đến lúc kết thúc sẽ từ từ, đây là dạng mặc định.
+		ease-in	animation-timing-function: ease-in;	Chuyển động ban đầu sẽ chậm, sau đó nhanh dần.
+		ease-out	animation-timing-function: ease-out;	Chuyển động ban đầu sẽ nhanh, sau đó sẽ chậm dần.
+		ease-in-out	animation-timing-function: ease-in-out;	Chuyển động ban đầu chậm, sau đó nhanh, đến lúc kết thúc sẽ chậm dần.
+		cubic-bezier(n,n,n,n)	animation-timing-function: cubic-bezier(1,1,1,0);	Xác định giá trị riêng cho chuyển động, giá trị sẽ từ 0 tới 1.
+		animation-delay	thời gian	animation-delay: 3s;	Xác định sau bao lâu thì chuyển động sẽ bắt đầu, mặc định sẽ là 0
+		animation-iteration-count	số tự nhiên	animation-iteration-count: 4;	Xác định số lần thực hiện chuyển động.
+		infinite	animation-iteration-count: infinite;	Chuyển động sẽ thực hiện không giới hạn số lần.
+		animation-direction	normal	animation-direction: normal;	Chuyển động bình thường, đây là dạng mặc định.
+		alternate	animation-direction: alternate;	Chuyển động sẽ được đảo ngược ở chu kỳ tiếp theo.
+		animation-play-state	paused	animation-play-state: paused;	Xác định chuyển động dừng lại.
+		running	animation-play-state: running;	Xác định chuyển động chạy.
+		animation	[name] [duration] [timing] [delay] [interaction-count] [direction]	animation: myAnimation 5s linear 3s infinite alternate;	Đây là dạng tổng hợp của các thuộc tính trên, ngoại trừ thuộc tính animation-play-state.*/

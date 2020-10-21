@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bài 8: Modal - Tạo hộp thoại trong Bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+	<!-- 
+		Hộp thoại Modal:
+Hộp thoại modal thường dùng để kiểm tra lại lệnh của người dùng vì mục đích an toàn. 
+Ví dụ, người dùng đăng hoạt xóa 1 đối tượng, khi click vào một button sẽ hiện hộp thoại xác nhận lệnh.
+
+	Phần hộp thoại:
++ Khối bao bên ngoài có class=”modal” và một id đặt tùy ý, nên đặt id liên quan đến nội dung hay 
+công dụng của hộp thoại để dễ quản lý.
+
++ Bên trong là một khối class=”modal-dialog”, bên trong nữa là một khối class=”modal-content”.
+
++ Phần content gồm 3 phần:
+
+	modal-header: chứa tiêu đề của hộp thoại và một nút đóng hộp thoại.
+button có thuộc tính quan trọng nhất cần nhớ là data-dismiss=”modal” để đóng hộp thoại. 
+Điểm này khá giống với Alert mà mình đã giới thiệu.
+thẻ span để tạo dấu X theo định nghĩa sẵn của Bootstrap.
+
+	modal-body: chứa nội dung thông báo, hay câu hỏi.
+	modal-footer: chứa các button xử lý.
+
+Điều cần nhớ về button gọi modal là 2 thuộc tính data-toggle=”modal” và data-target=”#id-của-modal”. Nhớ có dấu #
+
+====================================
+
+	Chú thích Popover
+
+Popover dùng để chú thích cho một button hay thẻ a nào đó. Khi click vào button, chú thích sẽ hiện ra.
+
+Popover được xây dựng dựa trên thư viện của bên thứ ba là Popper JS nên cần thêm file popper.min.js 
+vào trước bootstrap.min.js.
+
+Các thuộc tính:
+	data-toggle=”popover”
+
+	data-container=”body”
+
+	data-placement=”right”: chú thích xuất hiện bên phải
+
+	title: tiêu đề của popover
+
+	data-content: nội dung chú thích
+
++ Thêm đoạn mã js vào bên dưới cùng, nằm dưới thẻ script bootstrap.min.js
+		<script type="text/javascript">
+			$(function () {
+				$('[data-toggle="popover"]').popover()
+			})
+		</script>
+
++ Muốn tắt chú thích thì nhấn vào button 1 lần nữa. 
+Nếu muốn tắt chú thích theo dạng click vào bất kỳ chỗ nào, 
+chúng ta thêm thuộc tính data-trigger=”focus” và thêm đoạn js sau
+	<script type="text/javascript">
+		$(function () {
+			$('[data-toggle="popover"]').popover()
+		})
+		$('.popover-dismiss').popover({
+			trigger: 'focus'
+		})
+	</script>
+	 -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<button class="btn btn-danger" data-toggle="modal" data-target="#modalDelele">Delete</button>
+				<!-- modal -->
+				<div class="modal fade" id="modalDelele">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title">Xóa</h4>
+								<button type="button" class="close" data-dismiss="modal"><span
+										aria-hidden="true">&times;</span></button>
+							</div>
+							<div class="modal-body">
+								Bạn có chắn chắc muốn xóa không?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-success">OK</button>
+							</div>
+						</div>
+					</div>
+				</div> <!-- end modal -->
+			</div>
+			<div class="col-md-3">
+				<button type="button" class="btn btn-outline-info" data-toggle="popover" data-container="body"
+					data-placement="right" data-content="popover content" title="Popover title"
+					data-trigger="focus">Popover</button>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Load jquery trước khi load bootstrap js -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<!-- script cho poover -->
+	<script type="text/javascript">
+		$(function () {
+			$('[data-toggle="popover"]').popover()
+		})
+		$('.popover-dismiss').popover({
+			trigger: 'focus'
+		})
+	</script>
+</body>
+
+</html>

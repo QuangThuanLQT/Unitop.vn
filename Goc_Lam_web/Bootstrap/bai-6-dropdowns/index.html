@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bài 6: Dropdowns – Tạo Menu Thu Gọn Trong Bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+	<!-- 
+
+		Cấu trúc và cách thức hoạt động của dropdowns:
+Do ropdowns được xây dựng dựa trên thư viện js của bên thứ ba (cụ thể là Popper JS) 
+nên bạn cần thêm file popper.min.js vào trước bootstrap.min.js. 
+Các bạn có thể tải file popper.min.js trong phần tài liệu của bootstrap,
+hoặc code demo của m2inh ở cuối bài viết cũng có chứa file này.
+
+Phần button hoặc thẻ a điều khiển:
+	Button và thẻ a điều khiển cần có thuộc tính data-toggle=”dropdown”
+
+Phần nội dung:
+	+ Các dòng trong menu là các thẻ a hoặc các bạn có thể dùng cấu trúc thẻ ul và li cũng được. 
+	Mỗi dòng có class=”dropdown-item”.
+
+	+ Tuy nhiên, các dòng chỉ mới xếp thành danh sách và chưa ẩn vào button.
+	 Để ẩn đi các item này, các bạn bao bên ngoài các thẻ a bằng 1 khối div có class=”dropdown-menu”.
+
+	+ Để giữa các dòng có đường kẻ phân chia, các bạn thêm thẻ div có class=”dropdown-divider”
+
+Để cho chuẩn hơn, 2 phần button và nội dung nên được nằm trong 1 khối có class=”dropdown”
+	 -->
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="dropdown">
+					<button class="btn btn-secondary" data-toggle="dropdown">Menu Dropdown</button>
+					<div class="dropdown-menu">
+						<a href="" class="dropdown-item">Item 1</a>
+						<div class="dropdown-divider"></div>
+						<a href="" class="dropdown-item">Item 2</a>
+						<div class="dropdown-divider"></div>
+						<a href="" class="dropdown-item">Item 3</a>
+					</div>
+				</div>
+			</div> <!-- end dropdown -->
+			<div class="col-md-3">
+				<!-- Split dropright button -->
+				<div class="btn-group dropright">
+					<button type="button" class="btn btn-secondary">
+						Split dropright
+					</button>
+					<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="sr-only">Toggle Dropright</span>
+					</button>
+					<div class="dropdown-menu">
+						<a href="" class="dropdown-item">Item 1</a>
+						<div class="dropdown-divider"></div>
+						<a href="" class="dropdown-item">Item 2</a>
+						<div class="dropdown-divider"></div>
+						<a href="" class="dropdown-item">Item 3</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load jquery trước khi load bootstrap js -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

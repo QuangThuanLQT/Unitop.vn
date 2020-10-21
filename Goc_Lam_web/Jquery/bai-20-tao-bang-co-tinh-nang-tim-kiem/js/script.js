@@ -1,0 +1,44 @@
+// function myFunction() {
+//   // Declare variables 
+//   var input, filter, table, tr, td, i;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("myTable");
+//   tr = table.getElementsByTagName("tr");
+
+//   // Loop through all table rows, and hide those who don't match the search query
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[0];
+//     if (td) {
+//       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     } 
+//   }
+// }
+// $(document).ready(function() {
+//   $('#myInput').on('keyup', function(event) {
+//     event.preventDefault();
+//     /* Act on the event */
+//     var tukhoa = $(this).val().toLowerCase();
+//     $('#myTable tr').filter(function() {
+//       $(this).toggle($(this).text().toLowerCase().indexOf(tukhoa)>-1);
+//     });
+
+//   });
+// });
+
+$(document).ready(function(){
+	$('#myInput').keyup(function(){
+		var tukhoa = $(this).val().toLowerCase();
+		console.log(tukhoa);
+		//Phương thức toLowerCase () chuyển đổi một chuỗi thành các chữ cái thường.
+		$('#myTable tr').filter(function(){ 
+		//Phương thức filter() dùng để tạo một mảng mới với tất cả các phần tử thỏa điều kiện của một hàm.
+			$(this).toggle($(this).text().toLowerCase().indexOf(tukhoa)>-1);
+		//Phương thức indexOf () trả về vị trí xuất hiện đầu tiên của một giá trị được chỉ định trong một chuỗi.
+		});
+	});
+});

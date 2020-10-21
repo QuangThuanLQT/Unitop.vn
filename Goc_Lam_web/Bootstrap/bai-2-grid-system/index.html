@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bài 2: Hệ thống lưới trong Bootstrap và responsive - Grid System Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+
+	<!-- 
+
+		======Một lưu ý trước tiên là Bootstrap 4 chuyển sang dùng flexbox thay vì float cho hệ thống lưới này.
+		
+		======Đầu tiên cần khối có class container hoặc container-fluid bao bên ngoài. Sự khác biệt giữa 2 loại này là:
+
++ container: sẽ là một khối có chiều rộng khoảng 1200px, nằm chính giữa trang web.
+
++ container-fuild: sẽ là một khối có chiều rộng full màn hình.
+
+		======Các loại chuẩn màn hình:
++ xs: extremely small – phone – chiều rộng màn hình nhỏ hơn 576px
+
++ sm: small – tablet- máy tính bảng  > 576px
+
++ md: medium – laptop  >768px
+
++ lg: large màn hình desktop > 992px
+
++ xl: extremely large màn hình lớn  > 1200px
+
+	 -->
+
+
+	<h1>Container</h1>
+	<div class="container" style="background-color: grey; margin-bottom: 50px;">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="khoi"></div>
+			</div>
+			<div class="col-md-8 col-sm-6 col-xs-12">
+				<div class="khoi"></div>
+			</div>
+		</div>
+	</div>
+	<h1>Container-fuild</h1>
+	<div class="container-fluid" style="background-color: grey;">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="khoi"></div>
+			</div>
+			<div class="col-md-4">
+				<div class="khoi"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
